@@ -1,0 +1,116 @@
+/*
+ Theme Name:     Twenty Fourteen + AudioTheme
+ Theme URI:      http://audiotheme.com/view/twenty-fourteen-child/
+ Description:    Twenty Fourteen Child Theme for AudioTheme
+ Author:         AudioTheme
+ Author URI:     http://audiotheme.com
+ Template:       twentyfourteen
+ Version:        1.0.0
+*/
+
+@import url(../twentyfourteen/style.css);
+
+/**
+ * AudioTheme Video
+ * -----------------------------------------------------------------------------
+ */
+
+.single-audiotheme_video .has-post-thumbnail .entry-header {
+	margin-top: -30px;
+}
+
+
+/**
+ * Archives
+ * -----------------------------------------------------------------------------
+ */
+
+.archive .audiotheme .archive-title {
+	font-size: 16px;
+	font-weight: 900;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.archive .audiotheme .archive-intro {
+	color: #767676;
+	font-size: 14px;
+	line-height: 1.2857142857;
+	padding-top: 18px;
+}
+
+.archive .audiotheme .audiotheme-grid,
+.archive .audiotheme .audiotheme-gigs {
+	margin: 0 auto;
+	max-width: 474px;
+}
+
+.archive .audiotheme .audiotheme-grid .item {
+	margin: 0 0 4%;
+}
+
+.archive .audiotheme .audiotheme-grid .item-2np1 {
+	margin-right: 4%;
+}
+
+.archive .audiotheme .audiotheme-grid .item-2n {
+	margin-left: 4%;
+}
+
+.list-view .audiotheme .hentry {
+	padding: 15px 0;
+	border-top: none;
+}
+
+/* Gigs */
+
+.archive .audiotheme .audiotheme-gigs {
+	border-top: none;
+	margin-bottom: 48px;
+}
+
+.archive .audiotheme .audiotheme-gig-card .audiotheme-gig-meta-datetime {
+	padding: 0;
+}
+
+.archive .audiotheme .audiotheme-gig-card .audiotheme-gig-details {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+
+/**
+ * Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+@media screen and (min-width: 673px) {
+	.archive .audiotheme .audiotheme-grid,
+	.archive .audiotheme .audiotheme-gigs {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
+
+@media screen and (min-width: 1040px) {
+	.archive .audiotheme .audiotheme-grid,
+	.archive .audiotheme .audiotheme-gigs {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media screen and (min-width: 1110px) {
+	.archive .audiotheme .audiotheme-grid,
+	.archive .audiotheme .audiotheme-gigs {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
+
+@media screen and (min-width: 1218px) {
+	.archive .audiotheme .audiotheme-grid,
+	.archive .audiotheme .audiotheme-gigs {
+		margin-right: 54px;
+	}
+}
