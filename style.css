@@ -43,6 +43,28 @@ body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell 
 	border-color: rgba(0, 0, 0, 0.1);
 }
 
+.featured-image a,
+.audiotheme-featured-image a,
+.audiotheme-record-artwork a {
+	background: #b2b2b2 url(../twentyfourteen/images/pattern-light.svg) repeat fixed;
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.featured-image a:hover,
+.audiotheme-featured-image a:hover,
+.audiotheme-record-artwork a:hover {
+	background-color: #999;
+}
+
+.featured-image a:hover img,
+.audiotheme-featured-image a:hover img,
+.audiotheme-record-artwork a:hover img {
+	opacity: 0.85;
+}
+
 
 /**
  * AudioTheme Gig
