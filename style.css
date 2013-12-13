@@ -71,7 +71,9 @@ body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell 
  * -----------------------------------------------------------------------------
  */
 
-
+.audiotheme-gig-time {
+	font-weight: 300;
+}
 
 
 /**
@@ -273,6 +275,19 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	padding: 15px 0;
 	border-top: none;
 }
+
+.archive .audiotheme .entry-title a {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.3333333333;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.archive .audiotheme .entry-meta {
+	margin-bottom: 0;
+}
+
 
 /* Gigs */
 
