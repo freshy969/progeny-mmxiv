@@ -270,6 +270,48 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 
 
 /**
+ * Widgets
+ * -----------------------------------------------------------------------------
+ */
+
+.content-sidebar .widget_audiotheme_record .widget-title,
+.content-sidebar .widget_audiotheme_track .widget-title,
+.content-sidebar .widget_audiotheme_video .widget-title {
+	line-height: 1.2857142857;
+	padding-top: 1px;
+}
+
+.content-sidebar .widget_audiotheme_record .widget-title:before,
+.content-sidebar .widget_audiotheme_track .widget-title:before,
+.content-sidebar .widget_audiotheme_video .widget-title:before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+	text-decoration: inherit;
+
+	background-color: #000;
+	color: #fff;
+	margin: -1px 9px 0 0;
+	padding: 6px 0 9px;
+	text-align: center;
+	vertical-align: middle;
+	width: 36px;
+}
+
+.content-sidebar .widget_audiotheme_record .widget-title:before {
+	content: "\f109";
+}
+
+.content-sidebar .widget_audiotheme_track .widget-title:before {
+	content: "\f109";
+}
+
+.content-sidebar .widget_audiotheme_video .widget-title:before {
+	content: "\f104";
+}
+
+
+/**
  * Media Queries
  * -----------------------------------------------------------------------------
  */
