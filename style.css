@@ -274,6 +274,30 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
  * -----------------------------------------------------------------------------
  */
 
+.widget_audiotheme_record .featured-image + p,
+.widget_audiotheme_track .featured-image + p,
+.widget_audiotheme_video .featured-image + p {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.widget_audiotheme_record .more,
+.widget_audiotheme_track .more,
+.widget_audiotheme_video .more {
+	padding-top: 18px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.widget_audiotheme_record .more a,
+.widget_audiotheme_track .more a,
+.widget_audiotheme_video .more a {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/* Widget Title Icons */
+
 .content-sidebar .widget_audiotheme_record .widget-title,
 .content-sidebar .widget_audiotheme_track .widget-title,
 .content-sidebar .widget_audiotheme_video .widget-title {
@@ -309,6 +333,8 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 .content-sidebar .widget_audiotheme_video .widget-title:before {
 	content: "\f104";
 }
+
+
 
 
 /**
