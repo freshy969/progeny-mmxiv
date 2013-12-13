@@ -46,7 +46,7 @@ body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell 
 	border-color: rgba(0, 0, 0, 0.1);
 }
 
-.audiotheme .featured-image a,
+.featured-image a,
 .audiotheme-featured-image a,
 .audiotheme-record-artwork a {
 	background: #b2b2b2 url(../twentyfourteen/images/pattern-light.svg) repeat fixed;
@@ -335,9 +335,20 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 /* Gigs */
-.archive .audiotheme-gig-time {
+.archive .audiotheme-gig-card .audiotheme-gig-title {
+	font-size: 18px;
 	font-weight: 300;
+	line-height: 1.3333333333;
+	margin: 0;
+	text-transform: uppercase;
 }
+
+.archive .audiotheme-gig-card .audiotheme-gig-details .audiotheme-gig-place .audiotheme-gig-venue,
+.archive .audiotheme-gig-note,
+.archive .audiotheme-gig-card .audiotheme-gig-meta-tickets .audiotheme-gig-tickets-price {
+	display: none;
+}
+
 
 .archive .audiotheme .audiotheme-gigs {
 	border-top: none;
@@ -351,6 +362,21 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 .archive .audiotheme .audiotheme-gig-card .audiotheme-gig-details {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+.archive .audiotheme .audiotheme-gig-meta-tickets {
+	padding-bottom: 0;
+}
+
+.archive .audiotheme-gig-tickets-link a {
+	display: inline-block;
+	color: #ffffff;
+	background-color: #24890d;
+	font-size: 12px;
+	padding: 5px 15px 4px;
+	margin-top: 12px;
+	text-transform: uppercase;
+	border-radius: 2px;
 }
 
 
