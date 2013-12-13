@@ -11,17 +11,207 @@
 @import url(../twentyfourteen/style.css);
 
 /**
+ * General AudioTheme Overides
+ * -----------------------------------------------------------------------------
+ */
+
+body .audiotheme-video-single .audiotheme-video-title,
+body .audiotheme-record-single .audiotheme-record-header .audiotheme-record-title {
+	font-size: 33px;
+	font-weight: 300;
+	line-height: 1.0909090909;
+	margin-bottom: 12px;
+	margin: 0 0 12px 0;
+	text-transform: uppercase;
+}
+
+.site-content .audiotheme-record-links,
+.site-content .audiotheme-tracklist-section {
+	margin: 0 auto;
+	max-width: 474px;
+	background-color: #ffffff;
+	padding: 12px 10px 0;
+}
+
+body .audiotheme .audiotheme-gig-card,
+body .audiotheme .audiotheme-meta-list,
+body .audiotheme .audiotheme-meta-list .audiotheme-meta-item,
+body .audiotheme .audiotheme-tracklist,
+body .audiotheme .audiotheme-tracklist .audiotheme-track,
+body .audiotheme .audiotheme-tracklist .audiotheme-track:before,
+body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell {
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/**
+ * AudioTheme Gig
+ * -----------------------------------------------------------------------------
+ */
+
+
+
+
+/**
+ * AudioTheme Record
+ * -----------------------------------------------------------------------------
+ */
+
+body .audiotheme .audiotheme-record-single {
+	padding: 0;
+}
+
+body .audiotheme .audiotheme-record-single .audiotheme-record-artwork {
+	margin: 0;
+	width: auto;
+	max-width: 100%;
+	float: none;
+	clear: both;
+}
+
+/* Record Meta */
+
+
+body .audiotheme .audiotheme-record-artist,
+body .audiotheme .audiotheme-record-single .audiotheme-record-meta {
+	clear: both;
+	margin: 0 auto 8px;
+	max-width: 474px;
+}
+
+body .audiotheme .audiotheme-record-single .audiotheme-record-meta {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+body .audiotheme .audiotheme-record-artist,
+body .audiotheme .audiotheme-record-single .audiotheme-record-meta,
+body .audiotheme .audiotheme-record-single .audiotheme-meta-item {
+	padding: 0;
+	color: #767676;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.3333333333;
+	text-transform: uppercase;
+}
+
+body .audiotheme-record-artist,
+body .audiotheme-record-meta {
+	display: inline-block;
+}
+
+body .audiotheme-record-single .audiotheme-record-header .audiotheme-record-artist,
+body .audiotheme .audiotheme-meta-item {
+	margin-right: 10px;
+}
+
+body .audiotheme .audiotheme-meta-item {
+	border: none;
+}
+
+body .audiotheme-record-single .audiotheme-label {
+	display: none;
+}
+
+
+/* Record Links */
+
+body .audiotheme-record-links-list {
+	margin-top: 0;
+}
+
+body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link {
+	background: #000;
+}
+
+body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link:hover {
+	color: #000;
+	border-color: #000;
+}
+
+
+/* Tracklist */
+
+body .audiotheme-record-single .audiotheme-tracklist-title {
+	font-weight: 900;
+	line-height: 2;
+}
+
+body .audiotheme .audiotheme-tracklist {
+	margin-top: 20px;
+}
+
+body .audiotheme-tracklist .audiotheme-track .audiotheme-track-title {
+	font-weight: 400;
+}
+
+body .audiotheme .audiotheme-tracklist .audiotheme-track:before {
+	color: #767676;
+	border-right: none;
+	text-align: right;
+	width: 25px;
+	padding-right: 5px;
+}
+
+body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-meta .audiotheme-track-download-link {
+	margin: -2px 10px 0 0;
+}
+
+body .audiotheme-tracklist .audiotheme-track.is-playable:hover {
+	background: none;
+}
+
+
+/**
+ * AudioTheme Track
+ * -----------------------------------------------------------------------------
+ */
+
+body .audiotheme .audiotheme-record-subtitle {
+	margin-bottom: 0;
+}
+
+body .audiotheme .audiotheme-record-subtitle a {
+	color: #2b2b2b;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.7142857142;
+	text-transform: none;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 11px 0 12px;
+	width: 100%;
+}
+
+body .audiotheme .audiotheme-record-subtitle a:before {
+	content: "Record";
+	color: #767676;
+	display: block;
+	font-size: 12px;
+	font-weight: 900;
+	line-height: 2;
+	text-transform: uppercase;
+}
+
+body .audiotheme .audiotheme-record-subtitle a:hover {
+	color: #41a62a;
+}
+
+
+/**
  * AudioTheme Video
  * -----------------------------------------------------------------------------
  */
 
-.single-audiotheme_video .has-post-thumbnail .entry-header {
+.audiotheme-video-single.has-post-thumbnail .entry-header {
 	margin-top: -30px;
 }
 
 
 /**
- * Archives
+ * AudioTheme Archives
  * -----------------------------------------------------------------------------
  */
 
@@ -86,7 +276,9 @@
 
 @media screen and (min-width: 673px) {
 	.archive .audiotheme .audiotheme-grid,
-	.archive .audiotheme .audiotheme-gigs {
+	.archive .audiotheme .audiotheme-gigsm,
+	.site-content .audiotheme-record-links,
+	.site-content .audiotheme-tracklist-section {
 		padding-right: 30px;
 		padding-left: 30px;
 	}
@@ -94,7 +286,9 @@
 
 @media screen and (min-width: 1040px) {
 	.archive .audiotheme .audiotheme-grid,
-	.archive .audiotheme .audiotheme-gigs {
+	.archive .audiotheme .audiotheme-gigsm,
+	.site-content .audiotheme-record-links,
+	.site-content .audiotheme-tracklist-section {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
@@ -102,7 +296,9 @@
 
 @media screen and (min-width: 1110px) {
 	.archive .audiotheme .audiotheme-grid,
-	.archive .audiotheme .audiotheme-gigs {
+	.archive .audiotheme .audiotheme-gigsm,
+	.site-content .audiotheme-record-links,
+	.site-content .audiotheme-tracklist-section {
 		padding-right: 30px;
 		padding-left: 30px;
 	}
@@ -110,7 +306,9 @@
 
 @media screen and (min-width: 1218px) {
 	.archive .audiotheme .audiotheme-grid,
-	.archive .audiotheme .audiotheme-gigs {
+	.archive .audiotheme .audiotheme-gigsm,
+	.site-content .audiotheme-record-links,
+	.site-content .audiotheme-tracklist-section {
 		margin-right: 54px;
 	}
 }

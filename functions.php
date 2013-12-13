@@ -1,5 +1,29 @@
 <?php
 
+
+/**
+ * Extend the default WordPress post classes.
+ *
+ * Adds a post class to denote:
+ * Non-password protected page with a post thumbnail.
+ *
+ * @since Twenty Fourteen 1.0
+ *
+ * @param array $classes A list of existing post class values.
+ * @return array The filtered post class list.
+ */
+function twentyfourteen_audiotheme_post_classes( $classes ) {
+	global $post;
+
+	if ( 'audiotheme_track' == $post->post_type && has_post_thumbnail( $post->post_parent ) ) {
+		$classes[] = 'has-post-thumbnail';
+	}
+
+	return array_unique( $classes );
+}
+add_filter( 'post_class', 'twentyfourteen_audiotheme_post_classes' );
+
+
 /**
  * Activate the settings meta box on record and video archives.
  */
@@ -20,7 +44,7 @@ function twentyfourteen_audiotheme_archive_settings_fields( $fields, $post_type 
 	}
 
 	$fields['columns'] = array(
-		'choices' => range( 1, 3 ),
+		'choices' => range( 2, 2 ),
 		'default' => 2,
 	);
 
