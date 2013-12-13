@@ -94,7 +94,6 @@ function nowell_audiotheme_setup() {
 
 	// Add support for AudioTheme widgets
 	add_theme_support( 'audiotheme-widgets', array(
-		'recent-posts',
 		'record',
 		'track',
 		'upcoming-gigs',
