@@ -1,5 +1,11 @@
 <?php
 
+function twentyfourteen_audiotheme_widget_image_size( $size, $instance ) {
+	return array( 612, 612 ); // Sidebar width * 2
+}
+add_filter( 'audiotheme_widget_record_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
+add_filter( 'audiotheme_widget_track_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
+add_filter( 'audiotheme_widget_video_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
 
 /**
  * Extend the default WordPress post classes.

@@ -274,18 +274,28 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
  * -----------------------------------------------------------------------------
  */
 
-.widget_audiotheme_record .featured-image + p,
-.widget_audiotheme_track .featured-image + p,
-.widget_audiotheme_video .featured-image + p {
+.widget_audiotheme_record .featured-image,
+.widget_audiotheme_track .featured-image,
+.widget_audiotheme_video .featured-image {
+	margin-bottom: 0;
+}
+
+.widget_audiotheme_record .featured-image + p:not(.more),
+.widget_audiotheme_track .featured-image + p:not(.more),
+.widget_audiotheme_video .featured-image + p:not(.more) {
 	font-size: 12px;
+	font-style: italic;
 	line-height: 1.5;
+	margin: 9px 0 18px;
+	padding-right: 10px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .widget_audiotheme_record .more,
 .widget_audiotheme_track .more,
 .widget_audiotheme_video .more {
-	padding-top: 18px;
-	border-top: 1px solid rgba(0,0,0,0.1);
+	margin-top: 18px;
 }
 
 .widget_audiotheme_record .more a,
