@@ -42,7 +42,8 @@ body .audiotheme .audiotheme-meta-list .audiotheme-meta-item,
 body .audiotheme .audiotheme-tracklist,
 body .audiotheme .audiotheme-tracklist .audiotheme-track,
 body .audiotheme .audiotheme-tracklist .audiotheme-track:before,
-body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell {
+body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-cell,
+body .content-sidebar .widget_audiotheme_upcoming_gigs dl {
 	border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -456,6 +457,40 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 
 .content-sidebar .widget_audiotheme_video .widget-title:before {
 	content: "\f104";
+}
+
+/* Recent Gigs */
+
+.widget_audiotheme_upcoming_gigs dd {
+	display: none;
+}
+
+.widget_audiotheme_upcoming_gigs dd.location,
+.widget_audiotheme_upcoming_gigs dd.date {
+	display: block;
+	margin-bottom: 0;
+}
+
+.widget_audiotheme_upcoming_gigs dd.location {
+	font-style: italic;
+}
+
+.content-sidebar .widget_audiotheme_upcoming_gigs dl {
+	margin-bottom: 0;
+	padding: 8px 0 9px;
+	border-bottom: 1px solid;
+}
+
+.content-sidebar .widget_audiotheme_upcoming_gigs dl:last-child {
+	border: none;
+}
+
+.content-sidebar .widget_audiotheme_upcoming_gigs dt {
+	font-weight: 400;
+}
+
+.content-sidebar .widget_audiotheme_upcoming_gigs .location a {
+	color: #767676;
 }
 
 
