@@ -60,7 +60,7 @@ body .content-sidebar .widget_audiotheme_upcoming_gigs dl {
 .featured-image a:hover,
 .audiotheme-featured-image a:hover,
 .audiotheme-record-artwork a:hover {
-	background-color: #999;
+	background-color: #999999;
 }
 
 .featured-image a:hover img,
@@ -205,12 +205,12 @@ body .audiotheme-record-links-list {
 }
 
 body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link {
-	background: #000;
+	background: #000000;
 }
 
 body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link:hover {
-	color: #000;
-	border-color: #000;
+	color: #000000;
+	border-color: #000000;
 }
 
 /* Tracklist */
@@ -438,8 +438,8 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	font: normal 16px/1 Genericons;
 	text-decoration: inherit;
 
-	background-color: #000;
-	color: #fff;
+	background-color: #000000;
+	color: #ffffff;
 	margin: -1px 9px 0 0;
 	padding: 6px 0 9px;
 	text-align: center;
