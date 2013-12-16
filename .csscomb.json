@@ -1,0 +1,21 @@
+{
+	"always-semicolon": true,
+	"block-indent": "\t",
+	"colon-space": true,
+	"color-case": "lower",
+	"color-shorthand": false,
+	"combinator-space": true,
+	"element-case": "lower",
+	"eof-newline": true,
+	"exclude": [
+		".git/**",
+		"node_modules/**"
+	],
+	"leading-zero": true,
+	"remove-empty-rulesets": true,
+	"rule-indent": "\t",
+	"stick-brace": true,
+	"strip-spaces": true,
+	"unitless-zero": true,
+	"verbose": true
+}

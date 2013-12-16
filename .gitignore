@@ -1,2 +1,7 @@
 .DS_STORE
 .DS_Store
+config.json
+docs
+node_modules
+npm-debug.log
+release
