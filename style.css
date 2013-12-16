@@ -461,6 +461,10 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 
 /* Recent Gigs */
 
+.widget_audiotheme_upcoming_gigs dl {
+	margin-bottom: 6px;
+}
+
 .widget_audiotheme_upcoming_gigs dd {
 	display: none;
 }
@@ -475,6 +479,10 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	font-style: italic;
 }
 
+.primary-sidebar .widget_audiotheme_upcoming_gigs .location a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
 .content-sidebar .widget_audiotheme_upcoming_gigs dl {
 	margin-bottom: 0;
 	padding: 8px 0 9px;
@@ -485,7 +493,7 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	border: none;
 }
 
-.content-sidebar .widget_audiotheme_upcoming_gigs dt {
+.widget_audiotheme_upcoming_gigs dt {
 	font-weight: 400;
 }
 
