@@ -384,6 +384,41 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	margin-top: 10px;
 }
 
+/* Paging Navigation */
+
+body .audiotheme-paged-nav {
+	padding: 0;
+	margin: 48px 0;
+	border-top: 5px solid #000;
+	border-bottom: none;
+	text-align: center;
+}
+
+body .audiotheme-paged-nav .audiotheme-paged-nav-prev,
+body .audiotheme-paged-nav .audiotheme-paged-nav-next {
+	float: none;
+	width: auto;
+	display: inline-block;
+	margin-top: -5px;
+}
+
+body .audiotheme-paged-nav a {
+	border-top: 5px solid transparent;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 900;
+	margin-right: 1px;
+	padding: 7px 16px;
+	text-transform: uppercase;
+	color: #2b2b2b;
+}
+
+body .audiotheme-paged-nav a:hover {
+	border-top: 5px solid #41a62a;
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
 
 /**
  * Widgets
