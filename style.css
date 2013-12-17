@@ -496,6 +496,14 @@ body .audiotheme-paged-nav a:hover {
 
 /* Recent Gigs */
 
+.post-type-archive-audiotheme_gig .widget_audiotheme_upcoming_gigs {
+	display: none;
+}
+
+.post-type-archive-audiotheme_gig.date .widget_audiotheme_upcoming_gigs {
+	display: block;
+}
+
 .widget_audiotheme_upcoming_gigs dl {
 	margin-bottom: 6px;
 }
