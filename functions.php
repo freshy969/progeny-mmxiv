@@ -1,6 +1,8 @@
 <?php
 /**
  * Register support for AudioTheme features.
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_setup() {
 	// Add support for AudioTheme widgets
@@ -16,6 +18,8 @@ add_action( 'after_setup_theme', 'twentyfourteen_audiotheme_setup' );
 /**
  * Allow Tags metabox on AudioTheme Post Types. This allows theme to be included
  * in the featured content section.
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_admin_init() {
 	register_taxonomy( 'post_tag', array( 'audiotheme_record' ) );
@@ -24,6 +28,8 @@ add_action( 'admin_init', 'twentyfourteen_audiotheme_admin_init' );
 
 /**
  * Before AudioTheme Main Content
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_before_main_content() {
 	echo '<div id="main-content" class="main-content">';
@@ -34,6 +40,8 @@ add_action( 'audiotheme_before_main_content', 'twentyfourteen_audiotheme_before_
 
 /**
  * After AudioTheme Main Content
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_after_main_content() {
 	echo '</div><!-- #content -->';
@@ -46,6 +54,8 @@ add_action( 'audiotheme_after_main_content', 'twentyfourteen_audiotheme_after_ma
 
 /**
  * Adjust AudioTheme widget image sizes
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_widget_image_size( $size, $instance ) {
 	return array( 612, 612 ); // Sidebar width x 2
@@ -56,6 +66,8 @@ add_filter( 'audiotheme_widget_video_image_size', 'twentyfourteen_audiotheme_wid
 
 /**
  * Extend the default AudioTheme post classes.
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_post_classes( $classes ) {
 	global $post;
@@ -70,6 +82,8 @@ add_filter( 'post_class', 'twentyfourteen_audiotheme_post_classes' );
 
 /**
  * Activate the settings meta box on record and video archives.
+ *
+ * @since 1.0.0
  */
 add_action( 'add_audiotheme_archive_settings_meta_box_audiotheme_record', '__return_true' );
 add_action( 'add_audiotheme_archive_settings_meta_box_audiotheme_video', '__return_true' );
@@ -80,6 +94,8 @@ add_action( 'add_audiotheme_archive_settings_meta_box_audiotheme_video', '__retu
  * @param array $fields List of default fields to activate.
  * @param string $post_type Post type archive.
  * @return array
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_archive_settings_fields( $fields, $post_type ) {
 	if ( ! in_array( $post_type, array( 'audiotheme_gig', 'audiotheme_record', 'audiotheme_video' ) ) ) {
@@ -99,6 +115,8 @@ add_filter( 'audiotheme_archive_settings_fields', 'twentyfourteen_audiotheme_arc
 
 /**
  * Add AudioTheme Post Types to featured posts query
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_get_featured_posts( $posts ) {
 	$options = get_option( 'featured-content' );
@@ -139,6 +157,8 @@ add_filter( 'twentyfourteen_get_featured_posts', 'twentyfourteen_audiotheme_get_
  *
  * @param int|WP_Post $post Optional. Post to get the archive title for. Defaults to the current post.
  * @return string
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_get_archive_title( $post = null, $singular = false ) {
 	$post = get_post( $post );
@@ -154,6 +174,8 @@ function twentyfourteen_audiotheme_get_archive_title( $post = null, $singular = 
 
 /**
  * Print archive link
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_archive_link() {
 	global $post;
