@@ -287,6 +287,10 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
  * -----------------------------------------------------------------------------
  */
 
+.audiotheme-video-single .audiotheme-term-list {
+	display: none;
+}
+
 .audiotheme-video-single.has-post-thumbnail .entry-header {
 	margin-top: -30px;
 }
