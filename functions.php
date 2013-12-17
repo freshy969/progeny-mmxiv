@@ -103,7 +103,7 @@ function twentyfourteen_audiotheme_archive_settings_fields( $fields, $post_type 
 	}
 
 	$fields['columns'] = array(
-		'choices' => range( 2, 2 ),
+		'choices' => range( 1, 2 ),
 		'default' => 2,
 	);
 

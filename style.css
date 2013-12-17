@@ -318,7 +318,13 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 .archive .audiotheme .audiotheme-grid .item {
+	width: 100%;
 	margin: 0 0 4%;
+}
+
+.archive .audiotheme .audiotheme-grid .item-2np1,
+.archive .audiotheme .audiotheme-grid .item-2n {
+	width: 46%;
 }
 
 .archive .audiotheme .audiotheme-grid .item-2np1 {
@@ -330,7 +336,6 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 .list-view .audiotheme .hentry {
-	padding: 15px 0;
 	border-top: none;
 }
 
