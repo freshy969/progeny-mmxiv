@@ -4,8 +4,8 @@
  *
  * @since 1.0.0
  */
-require( get_template_directory() . '/includes/template-tags.php' );
-require( get_template_directory() . '/includes/hooks.php' );
+require( get_stylesheet_directory() . '/includes/template-tags.php' );
+require( get_stylesheet_directory() . '/includes/hooks.php' );
 
 /**
  * Load functions and hooks for supported plugins.

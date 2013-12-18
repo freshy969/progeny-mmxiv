@@ -13,7 +13,7 @@
  * @since 1.0.0
  */
 if ( twentyfourteen_is_audiotheme_active() ) {
-	require( get_template_directory() . '/audiotheme/functions.php' );
+	require( get_stylesheet_directory() . '/audiotheme/functions.php' );
 } else {
 	add_action( 'admin_notices', 'twentyfourteen_audiotheme_framework_required_notice' );
 	add_action( 'admin_init', 'twentyfourteen_audiotheme_framework_required_notice_dismiss' );
