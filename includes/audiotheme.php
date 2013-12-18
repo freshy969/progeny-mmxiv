@@ -9,8 +9,12 @@
 
 /**
  * Functionality to load if the framework isn't active.
+ *
+ * @since 1.0.0
  */
-if ( ! twentyfourteen_is_audiotheme_active() ) {
+if ( twentyfourteen_is_audiotheme_active() ) {
+	require( get_template_directory() . '/audiotheme/functions.php' );
+} else {
 	add_action( 'admin_notices', 'twentyfourteen_audiotheme_framework_required_notice' );
 	add_action( 'admin_init', 'twentyfourteen_audiotheme_framework_required_notice_dismiss' );
 }
@@ -23,6 +27,8 @@ if ( ! twentyfourteen_is_audiotheme_active() ) {
  * if it exists.
  *
  * @return bool
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_is_audiotheme_active() {
 	$is_active = in_array( 'audiotheme/audiotheme.php', (array) get_option( 'active_plugins', array() ) );
@@ -34,6 +40,8 @@ function twentyfourteen_is_audiotheme_active() {
 
 /**
  * Display a notice if the AudioTheme framework isn't activated.
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_framework_required_notice() {
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -74,6 +82,8 @@ function twentyfourteen_audiotheme_framework_required_notice() {
 
 /**
  * Dismiss AudioTheme framework notice
+ *
+ * @since 1.0.0
  */
 function twentyfourteen_audiotheme_framework_required_notice_dismiss() {
 	// If user clicks to ignore the notice, add that to their user meta.
