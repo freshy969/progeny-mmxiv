@@ -1,5 +1,10 @@
 <?php
 /**
+ * Load functions and hooks for supported plugins.
+ */
+require( get_stylesheet_directory() . '/includes/audiotheme.php' );
+
+/**
  * Register support for AudioTheme features.
  *
  * @since 1.0.0
