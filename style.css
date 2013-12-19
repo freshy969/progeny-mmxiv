@@ -326,19 +326,6 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	margin: 0 0 4%;
 }
 
-.archive .audiotheme .audiotheme-grid .item-2np1,
-.archive .audiotheme .audiotheme-grid .item-2n {
-	width: 46%;
-}
-
-.archive .audiotheme .audiotheme-grid .item-2np1 {
-	margin-right: 4%;
-}
-
-.archive .audiotheme .audiotheme-grid .item-2n {
-	margin-left: 4%;
-}
-
 .list-view .audiotheme .hentry {
 	border-top: none;
 }
@@ -558,6 +545,33 @@ body .audiotheme-paged-nav a:hover {
  * Media Queries
  * -----------------------------------------------------------------------------
  */
+@media screen and (max-width: 400px) {
+	.archive .audiotheme .archive-header,
+	.archive .audiotheme .audiotheme-grid .item {
+		border-bottom: none;
+	}
+}
+
+@media screen and (min-width: 401px) {
+	.archive .audiotheme .audiotheme-grid,
+	.archive .audiotheme .audiotheme-gigs {
+		margin: 0 auto 60px;
+		padding: 0 10px;
+	}
+
+	.archive .audiotheme .audiotheme-grid .item-2np1,
+	.archive .audiotheme .audiotheme-grid .item-2n {
+		width: 46%;
+	}
+
+	.archive .audiotheme .audiotheme-grid .item-2np1 {
+		margin-right: 4%;
+	}
+
+	.archive .audiotheme .audiotheme-grid .item-2n {
+		margin-left: 4%;
+	}
+}
 
 @media screen and (min-width: 673px) {
 	.archive .audiotheme .audiotheme-grid,
@@ -600,4 +614,13 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-tracklist-section {
 		margin-right: 54px;
 	}
+
+	.full-width.archive .audiotheme .audiotheme-grid,
+	.full-width.archive .audiotheme .audiotheme-gigs,
+	.full-width .site-content .audiotheme-gig-single,
+	.full-width .site-content .audiotheme-record-links,
+	.full-width .site-content .audiotheme-tracklist-section {
+		margin-right: auto;
+	}
+
 }
