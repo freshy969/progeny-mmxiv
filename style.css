@@ -385,7 +385,7 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 body .audiotheme-paged-nav {
 	padding: 0;
 	margin: 48px 0;
-	border-top: 5px solid #000;
+	border-top: 5px solid #000000;
 	border-bottom: none;
 	text-align: center;
 }
@@ -622,5 +622,4 @@ body .audiotheme-paged-nav a:hover {
 	.full-width .site-content .audiotheme-tracklist-section {
 		margin-right: auto;
 	}
-
 }
