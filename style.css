@@ -11,6 +11,22 @@
 @import url(../twentyfourteen/style.css);
 
 /**
+ * Misc
+ * -----------------------------------------------------------------------------
+ */
+
+.site-navigation .highlight > a,
+.site-navigation .highlight.current_page_item > a,
+.site-navigation .highlight.current_page_ancestor > a,
+.site-navigation .highlight.current-menu-item > a,
+.site-navigation .highlight.current-menu-ancestor > a {
+	background-color: #24890d;
+	color: #ffffff;
+	font-weight: 400;
+}
+
+
+/**
  * General AudioTheme Overides
  * -----------------------------------------------------------------------------
  */
