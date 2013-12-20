@@ -343,6 +343,7 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 /* Gigs */
+
 .archive .audiotheme-gig-card .audiotheme-gig-title {
 	font-size: 18px;
 	font-weight: 300;
@@ -433,21 +434,27 @@ body .audiotheme-paged-nav a:hover {
 	font-size: 12px;
 	font-style: italic;
 	line-height: 1.5;
-	margin: 9px 0 18px;
+	margin: 9px 0 0;
+}
+
+.content-sidebar .widget_audiotheme_record .featured-image + p:not(.more),
+.content-sidebar .widget_audiotheme_track .featured-image + p:not(.more),
+.content-sidebar .widget_audiotheme_video .featured-image + p:not(.more) {
+	margin-bottom: 18px;
 	padding-right: 10px;
 	padding-bottom: 18px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.widget_audiotheme_record .more,
-.widget_audiotheme_track .more,
-.widget_audiotheme_video .more {
+.content-sidebar .widget_audiotheme_record .more,
+.content-sidebar .widget_audiotheme_track .more,
+.content-sidebar .widget_audiotheme_video .more {
 	margin-top: 18px;
 }
 
-.widget_audiotheme_record .more a,
-.widget_audiotheme_track .more a,
-.widget_audiotheme_video .more a {
+.content-sidebar .widget_audiotheme_record .more a,
+.content-sidebar .widget_audiotheme_track .more a,
+.content-sidebar .widget_audiotheme_video .more a {
 	font-weight: 700;
 	text-transform: uppercase;
 }
