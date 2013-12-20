@@ -11,6 +11,10 @@ function twentyfourteen_audiotheme_post_classes( $classes ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 
+	if ( get_post_meta( get_the_ID(), 'member_ids', true ) ) {
+		$classes[] = 'has-members';
+	}
+
 	return array_unique( $classes );
 }
 add_filter( 'post_class', 'twentyfourteen_audiotheme_post_classes' );
