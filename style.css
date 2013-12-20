@@ -856,8 +856,15 @@ body .audiotheme-paged-nav a:hover {
 
 .contributor .icon-link a:before {
 	font-family: Genericons;
-	content: "\f107";
 	font-size: 2em;
+}
+
+.contributor .contributor-website-link:before {
+	content: "\f107";
+}
+
+.contributor .contributor-edit-link:before {
+	content: "\f411";
 }
 
 .contributor .icon .contributor-twitter-link {

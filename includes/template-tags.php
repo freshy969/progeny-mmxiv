@@ -108,6 +108,14 @@ function twentyfourteen_list_authors() {
 							</a>
 						</span>
 					<?php endif; ?>
+
+					<?php if ( is_user_logged_in() ) : ?>
+						<span class="icon icon-link">
+							<a class="contributor-edit-link" href="<?php echo esc_url( get_edit_user_link( $contributor_id ) ); ?>" target="_blank">
+								<?php _e( 'Edit', 'twentyfourteen' ); ?>
+							</a>
+						</span>
+					<?php endif; ?>
 				</div><!-- .contributor-summary -->
 			</div><!-- .contributor-info -->
 		</div><!-- .contributor -->
