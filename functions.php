@@ -37,6 +37,6 @@ add_action( 'after_setup_theme', 'twentyfourteen_audiotheme_setup' );
  * @since 1.0.0
  */
 function twentyfourteen_audiotheme_admin_init() {
-	register_taxonomy( 'post_tag', array( 'audiotheme_record' ) );
+	register_taxonomy_for_object_type( 'post_tag', 'audiotheme_record' );
 }
 add_action( 'admin_init', 'twentyfourteen_audiotheme_admin_init' );
