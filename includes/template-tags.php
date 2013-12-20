@@ -49,7 +49,8 @@ function twentyfourteen_audiotheme_archive_link() {
  * @return void
  */
 function twentyfourteen_list_authors() {
-	$contributor_ids = array_filter( wp_parse_id_list( get_post_meta( get_the_ID(), 'contributor_ids', true ) ) );
+	$member_ids = array_filter( wp_parse_id_list( get_post_meta( get_the_ID(), 'member_ids', true ) ) );
+	$contributor_ids = $member_ids;
 
 	if ( empty( $contributor_ids ) ) {
 		$contributor_ids = get_users( array(
@@ -64,7 +65,7 @@ function twentyfourteen_list_authors() {
 		$post_count = count_user_posts( $contributor_id );
 
 		// Move on if user has not published a post (yet).
-		if ( ! $post_count ) {
+		if ( empty( $member_ids ) && ! $post_count ) {
 			continue;
 		}
 		?>
