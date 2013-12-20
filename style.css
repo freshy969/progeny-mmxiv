@@ -680,7 +680,7 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .icon a:before {
-	font-size: 1.5em;
+	font-size: 1.35em;
 	position: absolute;
 	font-family: "audiotheme";
 	speak: none;
@@ -757,7 +757,6 @@ body .audiotheme-paged-nav a:hover {
 	position: relative;
 }
 
-
 .contributor .icon a,
 .primary-navigation .icon a {
 	padding-left: 0;
@@ -794,6 +793,19 @@ body .audiotheme-paged-nav a:hover {
 	line-height: 36px;
 }
 
+.widget_nav_menu .icon a {
+	position: relative;
+	text-indent: 18px;
+}
+
+.widget_nav_menu .icon a:before {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	font-size: 1em;
+	text-indent: 0;
+}
+
 .contributor .icon {
 	display: inline-block;
 }
@@ -809,7 +821,7 @@ body .audiotheme-paged-nav a:hover {
 	background-color: #24890d;
 	border: 0;
 	border-radius: 2px;
-	color: #fff;
+	color: #ffffff;
 	font-size: 12px;
 	text-indent: 36px;
 	text-transform: uppercase;
@@ -818,7 +830,7 @@ body .audiotheme-paged-nav a:hover {
 
 .contributor .icon a:hover {
 	opacity: 0.82;
-	color: #fff;
+	color: #ffffff;
 }
 
 .contributor .icon a:before {
@@ -836,7 +848,7 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .contributor .icon .contributor-facebook-link {
-	background-color: #3B5998;
+	background-color: #3b5998;
 }
 
 .contributor .icon .contributor-website-link {
@@ -847,6 +859,7 @@ body .audiotheme-paged-nav a:hover {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
 
 /**
  * Media Queries
