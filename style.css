@@ -778,6 +778,7 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .primary-navigation .icon a {
+	top: -1px;
 	width: 32px;
 	text-indent: 32px;
 }
