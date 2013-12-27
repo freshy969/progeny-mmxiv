@@ -31,12 +31,12 @@ add_action( 'audiotheme_after_main_content', 'twentyfourteen_audiotheme_after_ma
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_widget_image_size( $size, $instance ) {
-	return array( 612, 612 ); // Sidebar width x 2
+function twentyfourteen_audiotheme_widget_image_size( $size ) {
+	return array( 612, 612 ); // sidebar width x 2
 }
-add_filter( 'audiotheme_widget_record_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
-add_filter( 'audiotheme_widget_track_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
-add_filter( 'audiotheme_widget_video_image_size', 'twentyfourteen_audiotheme_widget_image_size', 20, 2 );
+add_filter( 'audiotheme_widget_record_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
+add_filter( 'audiotheme_widget_track_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
+add_filter( 'audiotheme_widget_video_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
 
 
 /**
