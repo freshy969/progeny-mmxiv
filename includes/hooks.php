@@ -1,5 +1,12 @@
 <?php
 /**
+ * Custom functions that act independently of the theme templates.
+ *
+ * @package twentyfourteen-audiotheme
+ * @since 1.0.0
+ */
+
+/**
  * Extend the default AudioTheme post classes.
  *
  * @since 1.0.0

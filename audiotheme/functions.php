@@ -1,4 +1,27 @@
 <?php
+/**
+ * AudioTheme Compatibility File
+ * See: http://audiotheme.com/
+ *
+ * @package twentyfourteen-audiotheme
+ */
+
+/**
+ * Register support for AudioTheme features.
+ *
+ * @since 1.0.0
+ */
+function twentyfourteen_audiotheme_setup() {
+	// Add support for AudioTheme widgets
+	add_theme_support( 'audiotheme-widgets', array(
+		'record',
+		'track',
+		'upcoming-gigs',
+		'video',
+	) );
+}
+add_action( 'after_setup_theme', 'twentyfourteen_audiotheme_setup' );
+
 
 /**
  * Before AudioTheme Main Content

@@ -1,5 +1,19 @@
 <?php
 /**
+ * Theme functions and definitions.
+ *
+ * Sets up the theme and provides some helper functions, which are used in the
+ * theme as custom template tags. Others are attached to action and filter
+ * hooks in WordPress to change core functionality.
+ *
+ * For more information on hooks, actions, and filters,
+ * see http://codex.wordpress.org/Plugin_API
+ *
+ * @package twentyfourteen-audiotheme
+ * @since 1.0.0
+ */
+
+/**
  * Load helper functions and libraries.
  *
  * @since 1.0.0
@@ -15,22 +29,6 @@ require( get_stylesheet_directory() . '/includes/hooks.php' );
 require( get_stylesheet_directory() . '/includes/audiotheme.php' );
 $twentyfourteen_audiotheme = new Audiotheme_Loader();
 $twentyfourteen_audiotheme->load();
-
-/**
- * Register support for AudioTheme features.
- *
- * @since 1.0.0
- */
-function twentyfourteen_audiotheme_setup() {
-	// Add support for AudioTheme widgets
-	add_theme_support( 'audiotheme-widgets', array(
-		'record',
-		'track',
-		'upcoming-gigs',
-		'video'
-	) );
-}
-add_action( 'after_setup_theme', 'twentyfourteen_audiotheme_setup' );
 
 /**
  * Allow Tags metabox on AudioTheme Post Types. This allows theme to be included
