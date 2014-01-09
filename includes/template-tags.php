@@ -152,8 +152,6 @@ function twentyfourteen_audiotheme_contributor_page_content() {
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
 			) );
-
-			edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
 		</div>
 	<?php
