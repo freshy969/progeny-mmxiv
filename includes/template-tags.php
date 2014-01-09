@@ -1,5 +1,12 @@
 <?php
 /**
+ * Custom template tags.
+ *
+ * @package twentyfourteen-audiotheme
+ * @since 1.0.0
+ */
+
+/**
  * Retrieve the title for an archive.
  *
  * @param int|WP_Post $post Optional. Post to get the archive title for. Defaults to the current post.
@@ -60,6 +67,9 @@ function twentyfourteen_list_authors() {
 			'who'     => 'authors',
 		) );
 	}
+
+	// Display page content before contributor list.
+	twentyfourteen_audiotheme_contributor_page_content();
 
 	foreach ( $contributor_ids as $contributor_id ) :
 		$post_count = count_user_posts( $contributor_id );
@@ -122,4 +132,30 @@ function twentyfourteen_list_authors() {
 
 		<?php
 	endforeach;
+}
+
+/**
+ * Function to display page content on contributor page template
+ */
+function twentyfourteen_audiotheme_contributor_page_content() {
+	global $post;
+
+	if ( '' != $post->post_content ) :
+	?>
+		<div class="entry-content">
+			<?php
+			the_content();
+
+			wp_link_pages( array(
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
+			) );
+
+			edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
+			?>
+		</div>
+	<?php
+	endif;
 }
