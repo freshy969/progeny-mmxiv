@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 		 * Archive the theme in the /release directory, excluding development
 		 * and build related files.
 		 *
-		 * The zip archive will be named: promenade-{{version}}.zip
+		 * The zip archive will be named: twentyfourteen-audiotheme-{{version}}.zip
 		 */
 		compress: {
 			build: {
