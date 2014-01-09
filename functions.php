@@ -13,6 +13,8 @@ require( get_stylesheet_directory() . '/includes/hooks.php' );
  * @since 1.0.0
  */
 require( get_stylesheet_directory() . '/includes/audiotheme.php' );
+$twentyfourteen_audiotheme = new Audiotheme_Loader();
+$twentyfourteen_audiotheme->load();
 
 /**
  * Register support for AudioTheme features.
