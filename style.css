@@ -573,16 +573,9 @@ body .audiotheme-paged-nav a:hover {
  * -----------------------------------------------------------------------------
  */
 
-@font-face {
-	font-family: "audiotheme";
-	src: url('assets/fonts/audiotheme.eot');
-	src: url('assets/fonts/audiotheme.eot?#iefix') format('embedded-opentype'), url('assets/fonts/audiotheme.ttf') format('truetype'), url('assets/fonts/audiotheme.woff') format('woff'), url('assets/fonts/audiotheme.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-	font-family: "audiotheme";
+	font-family: 'Genericons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -593,105 +586,6 @@ body .audiotheme-paged-nav a:hover {
 	-moz-osx-font-smoothing: grayscale;
 	text-decoration: inherit;
 	text-rendering: optimizeLegibility;
-}
-.icon-facebook:before {
-	content: "\e600";
-}
-.icon-bubble:before {
-	content: "\e61e";
-}
-.icon-envelope:before {
-	content: "\e61f";
-}
-.icon-google-plus:before {
-	content: "\e601";
-}
-.icon-feed:before {
-	content: "\e602";
-}
-.icon-apple:before {
-	content: "\e620";
-}
-.icon-vimeo:before {
-	content: "\e603";
-}
-.icon-youtube:before {
-	content: "\e604";
-}
-.icon-twitter:before {
-	content: "\e605";
-}
-.icon-github:before {
-	content: "\e606";
-}
-.icon-wordpress:before {
-	content: "\e607";
-}
-.icon-pinterest:before {
-	content: "\e60b";
-}
-.icon-play:before {
-	content: "\e60c";
-}
-.icon-pause:before {
-	content: "\e60d";
-}
-.icon-stop:before {
-	content: "\e60e";
-}
-.icon-cog:before {
-	content: "\e608";
-}
-.icon-menu:before {
-	content: "\e609";
-}
-.icon-close:before {
-	content: "\e60a";
-}
-.icon-plus:before {
-	content: "\e60f";
-}
-.icon-ticket:before {
-	content: "\e610";
-}
-.icon-calendar:before {
-	content: "\e611";
-}
-.icon-linkedin:before {
-	content: "\e612";
-}
-.icon-flickr:before {
-	content: "\e613";
-}
-.icon-soundcloud:before {
-	content: "\e614";
-}
-.icon-apple:before {
-	content: "\e615";
-}
-.icon-dribbble:before {
-	content: "\e616";
-}
-.icon-lastfm:before {
-	content: "\e617";
-}
-.icon-instagram:before {
-	content: "\e618";
-}
-.icon-chevron-left:before {
-	content: "\e619";
-}
-.icon-chevron-right:before {
-	content: "\e61a";
-}
-.icon-chevron-up:before {
-	content: "\e61b";
-}
-.icon-chevron-down:before {
-	content: "\e61c";
-}
-.icon-grid-two:before {
-	content: "\e61d";
 }
 
 .icon a {
@@ -702,7 +596,7 @@ body .audiotheme-paged-nav a:hover {
 .icon a:before {
 	font-size: 1.35em;
 	position: absolute;
-	font-family: "audiotheme";
+	font-family: 'Genericons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -714,62 +608,49 @@ body .audiotheme-paged-nav a:hover {
 	text-decoration: inherit;
 	text-rendering: optimizeLegibility;
 }
-
-.icon a[href*="apple.com"]:before {
-	content: "\e620";
-}
-.icon a[href*="apple.com"]:before {
-	content: "\e615";
-}
 .icon a[href*="dribbble.com"]:before {
-	content: "\e616";
+	content: "\f201";
 }
 .icon a[href*="facebook.com"]:before {
-	content: "\e600";
+	content: "\f204";
 }
 .icon a[href*="/feed/"]:before,
 .icon-feed .icon:before {
-	content: "\e602";
+	content: "\f413";
 }
 .icon a[href*="flickr.com"]:before {
-	content: "\e613";
+	content: "\f211";
 }
 .icon a[href*="github.com"]:before {
-	content: "\e606";
+	content: "\f200";
 }
 .icon a[href*="plus.google.com"]:before {
-	content: "\e601";
+	content: "\f218";
 }
 .icon a[href*="instagram.com"]:before {
-	content: "\e618";
-}
-.icon a[href*="last.fm"]:before {
-	content: "\e617";
+	content: "\f215";
 }
 .icon a[href*="linked.in"]:before {
-	content: "\e612";
+	content: "\f207";
 }
 .icon a[href*="pinterest.com"]:before {
-	content: "\e60b";
-}
-.icon a[href*="soundcloud.com"]:before {
-	content: "\e614";
+	content: "\f209";
 }
 .icon a[href*="twitter.com"]:before {
-	content: "\e605";
+	content: "\f202";
 }
 .icon a[href*="vimeo.com"]:before {
-	content: "\e603";
+	content: "\f212";
 }
 .icon a[href*="wordpress.org"]:before,
 .icon a[href*="wordpress.com"]:before {
-	content: "\e607";
+	content: "\f205";
 }
 .icon a[href*="youtube.com"]:before {
-	content: "\e604";
+	content: "\f213";
 }
 .icon.envelope a:before {
-	content: "\e61f";
+	content: "\f410";
 }
 
 .contributor .icon,
