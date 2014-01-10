@@ -11,11 +11,11 @@ In AudioTheme Fourteen, we've enhanced the default functionality of Twenty Fourt
 
 === More Widgets ===
 
-Featuring a new record or showcasing where you'll be playing next doesn't get any easier than adding a widget to any one of Twenty Fourteens sidebar areas. With AudioTheme Fourteen, you'll have access to the AudioTheme frameworks record, track, video, and upcoming gigs widgets, all styled to match Twenty Fourteen's clean design.
+Featuring a new record or listing your upcoming shows doesn't get any easier than adding a widget to sidebar area. With AudioTheme Fourteen, you'll have access to the AudioTheme frameworks record, track, video, and upcoming gigs widgets, all styled to match Twenty Fourteen's clean design.
 
 === Improved Page Templates ===
 
-We loved the concept of Twenty Fourteen's Contributor page template. We decided to extend this templates functionality to have more control over the users and content displayed on the page. With AudioTheme Fourteen, you can set a list of user ID's, allowing the template to showcase Members of your band along with links to their Twitter, Facebook, and/or personal websites.
+We loved the concept of Twenty Fourteen's Contributor page template. We decided to extend this templates functionality to allow more control over the users and content displayed on the page. AudioTheme Fourteen allows a list of user ID's to be set via a custom field providing a way to showcase members of your band. If set, links to Twitter, Facebook, and a personal website are displayed for each user, too!
 
 === Social Menu Icons ===
 
@@ -59,7 +59,6 @@ That said, some functionality like the social menu icons or enhanced Contributor
 === Where can I download the AudioTheme Framework? ===
 
 We provide an evalutaion copy of the framework for free via AudioTheme.com. Visit the link below and we'll send you a link to download an evaluation copy for free.
-
 
 === Do I have to purchase a Framework license? ===
 
