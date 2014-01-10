@@ -1,13 +1,13 @@
 {
-  "name": "TwentyFourteenAudioTheme",
-  "slug": "twentyfourteen-audiotheme",
+  "name": "AudioThemeFourteen",
+  "slug": "audiotheme-fourteen",
   "description": "Twenty Fourteen Child Theme for AudioTheme.",
   "version": "1.0.0",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/audiotheme/theme-twentyfourteen-child.git"
+    "url": "https://github.com/AudioTheme/audiotheme-fourteen.git"
   },
   "devDependencies": {
     "csscomb": "~0.1.0",
