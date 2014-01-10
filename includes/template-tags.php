@@ -14,7 +14,7 @@
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_get_archive_title( $post = null, $singular = false ) {
+function audiotheme_fourteen_get_archive_title( $post = null, $singular = false ) {
 	$post = get_post( $post );
 
 	if ( $singular ) {
@@ -31,7 +31,7 @@ function twentyfourteen_audiotheme_get_archive_title( $post = null, $singular = 
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_archive_link() {
+function audiotheme_fourteen_archive_link() {
 	global $post;
 
 	$post_type = get_post_type();
@@ -42,7 +42,7 @@ function twentyfourteen_audiotheme_archive_link() {
 	}
 	?>
 	<a href="<?php echo esc_url( $link ); ?>">
-		<?php echo esc_html( twentyfourteen_audiotheme_get_archive_title() ); ?>
+		<?php echo esc_html( audiotheme_fourteen_get_archive_title() ); ?>
 	</a>
 	<?php
 }
@@ -69,7 +69,7 @@ function twentyfourteen_list_authors() {
 	}
 
 	// Display page content before contributor list.
-	twentyfourteen_audiotheme_contributor_page_content();
+	audiotheme_fourteen_contributor_page_content();
 
 	foreach ( $contributor_ids as $contributor_id ) :
 		$post_count = count_user_posts( $contributor_id );
@@ -137,7 +137,7 @@ function twentyfourteen_list_authors() {
 /**
  * Function to display page content on contributor page template
  */
-function twentyfourteen_audiotheme_contributor_page_content() {
+function audiotheme_fourteen_contributor_page_content() {
 	global $post;
 
 	if ( '' != $post->post_content ) :

@@ -30,7 +30,7 @@
 		<?php  elseif ( ( 'audiotheme_record' || 'audiotheme_video' ) == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<span class="cat-links archive-link"><?php echo twentyfourteen_audiotheme_archive_link(); ?></span>
+				<span class="cat-links archive-link"><?php echo audiotheme_fourteen_archive_link(); ?></span>
 			</div>
 
 		<?php endif; ?>

@@ -27,8 +27,8 @@ require( get_stylesheet_directory() . '/includes/hooks.php' );
  * @since 1.0.0
  */
 require( get_stylesheet_directory() . '/includes/audiotheme.php' );
-$twentyfourteen_audiotheme = new Audiotheme_Loader();
-$twentyfourteen_audiotheme->load();
+$audiotheme_fourteen = new Audiotheme_Loader();
+$audiotheme_fourteen->load();
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_admin_init() {
+function audiotheme_fourteen_admin_init() {
 	register_taxonomy_for_object_type( 'post_tag', 'audiotheme_record' );
 }
-add_action( 'admin_init', 'twentyfourteen_audiotheme_admin_init' );
+add_action( 'admin_init', 'audiotheme_fourteen_admin_init' );

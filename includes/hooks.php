@@ -11,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_post_classes( $classes ) {
+function audiotheme_fourteen_post_classes( $classes ) {
 	global $post;
 
 	if ( 'audiotheme_track' == $post->post_type && has_post_thumbnail( $post->post_parent ) ) {
@@ -24,14 +24,14 @@ function twentyfourteen_audiotheme_post_classes( $classes ) {
 
 	return array_unique( $classes );
 }
-add_filter( 'post_class', 'twentyfourteen_audiotheme_post_classes' );
+add_filter( 'post_class', 'audiotheme_fourteen_post_classes' );
 
 /**
  * Add AudioTheme Post Types to featured posts query
  *
  * @since 1.0.0
  */
-function twentyfourteen_audiotheme_get_featured_posts( $posts ) {
+function audiotheme_fourteen_get_featured_posts( $posts ) {
 	$options = get_option( 'featured-content' );
 
 	$term = get_term_by( 'name', $options['tag-name'], 'post_tag' );
@@ -63,4 +63,4 @@ function twentyfourteen_audiotheme_get_featured_posts( $posts ) {
 
 	return $posts;
 }
-add_filter( 'twentyfourteen_get_featured_posts', 'twentyfourteen_audiotheme_get_featured_posts', 20 );
+add_filter( 'twentyfourteen_get_featured_posts', 'audiotheme_fourteen_get_featured_posts', 20 );
