@@ -31,6 +31,18 @@ $twentyfourteen_audiotheme = new Audiotheme_Loader();
 $twentyfourteen_audiotheme->load();
 
 /**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * @since 1.0.0
+ */
+function audiotheme_fourteen_setup() {
+	// Add support for translating strings in this theme.
+	// @link http://codex.wordpress.org/Function_Reference/load_theme_textdomain
+	load_child_theme_textdomain( 'audiotheme-fourteen', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
+
+/**
  * Allow Tags metabox on AudioTheme Post Types. This allows theme to be included
  * in the featured content section.
  *

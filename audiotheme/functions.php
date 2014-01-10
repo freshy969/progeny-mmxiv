@@ -22,7 +22,6 @@ function twentyfourteen_audiotheme_setup() {
 }
 add_action( 'after_setup_theme', 'twentyfourteen_audiotheme_setup' );
 
-
 /**
  * Before AudioTheme Main Content
  *
@@ -60,7 +59,6 @@ function twentyfourteen_audiotheme_widget_image_size( $size ) {
 add_filter( 'audiotheme_widget_record_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
 add_filter( 'audiotheme_widget_track_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
 add_filter( 'audiotheme_widget_video_image_size', 'twentyfourteen_audiotheme_widget_image_size' );
-
 
 /**
  * Activate the settings meta box on record and video archives.
