@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package twentyfourteen-audiotheme
+ * @package audiotheme-fourteen
  * @since 1.0.0
  */
 

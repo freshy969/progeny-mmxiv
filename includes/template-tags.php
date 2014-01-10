@@ -2,7 +2,7 @@
 /**
  * Custom template tags.
  *
- * @package twentyfourteen-audiotheme
+ * @package audiotheme-fourteen
  * @since 1.0.0
  */
 

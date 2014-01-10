@@ -3,7 +3,7 @@
  * A template for displaying featured posts on the front page.
  * Includes customizations to display AudioTheme related entry meta.
  *
- * @package twentyfourteen-audiotheme
+ * @package audiotheme-fourteen
  * @since 1.0.0
  */
 ?>

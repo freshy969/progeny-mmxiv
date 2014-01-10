@@ -3,7 +3,7 @@
  * AudioTheme Compatibility File
  * See: http://audiotheme.com/
  *
- * @package twentyfourteen-audiotheme
+ * @package audiotheme-fourteen
  */
 
 /**

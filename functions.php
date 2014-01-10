@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package twentyfourteen-audiotheme
+ * @package audiotheme-fourteen
  * @since 1.0.0
  */
 
