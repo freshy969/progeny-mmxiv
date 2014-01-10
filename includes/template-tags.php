@@ -91,14 +91,14 @@ function twentyfourteen_list_authors() {
 
 					<?php if ( $post_count ) : ?>
 						<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
-							<?php printf( _n( '%d Article', '%d Articles', $post_count, 'twentyfourteen' ), $post_count ); ?>
+							<?php printf( _n( '%d Article', '%d Articles', $post_count, 'audiotheme-fourteen' ), $post_count ); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if ( $twitter_username = get_the_author_meta( 'twitter', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-twitter-link" href="<?php echo esc_url( 'http://twitter.com/' . $twitter_username ); ?>" target="_blank">
-								<?php _e( 'Twitter', 'twentyfourteen' ); ?>
+								<?php _e( 'Twitter', 'audiotheme-fourteen' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -106,7 +106,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $facebook_url = get_the_author_meta( 'facebook', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-facebook-link" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank">
-								<?php _e( 'Facebook', 'twentyfourteen' ); ?>
+								<?php _e( 'Facebook', 'audiotheme-fourteen' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -114,7 +114,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $website_url = get_the_author_meta( 'user_url', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-website-link" href="<?php echo esc_url( $website_url ); ?>" target="_blank">
-								<?php _e( 'Website', 'twentyfourteen' ); ?>
+								<?php _e( 'Website', 'audiotheme-fourteen' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -122,7 +122,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( is_user_logged_in() ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-edit-link" href="<?php echo esc_url( get_edit_user_link( $contributor_id ) ); ?>" target="_blank">
-								<?php _e( 'Edit', 'twentyfourteen' ); ?>
+								<?php _e( 'Edit', 'audiotheme-fourteen' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -147,7 +147,7 @@ function twentyfourteen_audiotheme_contributor_page_content() {
 			the_content();
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'audiotheme-fourteen' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
