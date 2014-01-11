@@ -117,7 +117,7 @@ function twentyfourteen_list_authors() {
 						</span>
 					<?php endif; ?>
 
-					<?php if ( is_user_logged_in() ) : ?>
+					<?php if ( is_user_logged_in() && current_user_can( 'edit_user', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-edit-link" href="<?php echo esc_url( get_edit_user_link( $contributor_id ) ); ?>" target="_blank">
 								<?php _e( 'Edit', 'audiotheme-fourteen' ); ?>
