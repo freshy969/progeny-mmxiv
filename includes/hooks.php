@@ -36,16 +36,14 @@ add_filter( 'post_class', 'audiotheme_fourteen_post_classes', 10, 3 );
  *
  * @since 1.0.0
  *
- * @param array $posts List of featured post IDs.
+ * @param array $posts List of featured posts.
  * @return array
  */
 function audiotheme_fourteen_get_featured_posts( $posts ) {
-	$options = get_option( 'featured-content' );
+	$tag_id = Featured_Content::get_setting( 'tag-id' );
 
-	$term = get_term_by( 'name', $options['tag-name'], 'post_tag' );
-
-	// Return early if there are no terms with the set tag name.
-	if ( ! $term ) {
+	// Return early if a tag id hasn't been set.
+	if ( empty( $tag_id ) ) {
 		return $posts;
 	}
 
@@ -56,19 +54,11 @@ function audiotheme_fourteen_get_featured_posts( $posts ) {
 			array(
 				'field'    => 'term_id',
 				'taxonomy' => 'post_tag',
-				'terms'    => $term->term_id,
+				'terms'    => $tag_id,
 			),
 		),
 	) );
 
-	// Ensure correct format before save/return.
-	$featured_ids = wp_list_pluck( (array) $featured, 'ID' );
-	$featured_ids = array_map( 'absint', $featured_ids );
-
-	foreach( $featured_ids as $id ) {
-		$posts[] = $id;
-	}
-
-	return $posts;
+	return array_merge( $posts, $featured );
 }
 add_filter( 'twentyfourteen_get_featured_posts', 'audiotheme_fourteen_get_featured_posts', 20 );
