@@ -61,14 +61,6 @@ add_filter( 'audiotheme_widget_track_image_size', 'audiotheme_fourteen_widget_im
 add_filter( 'audiotheme_widget_video_image_size', 'audiotheme_fourteen_widget_image_size' );
 
 /**
- * Activate the settings meta box on record and video archives.
- *
- * @since 1.0.0
- */
-add_action( 'add_audiotheme_archive_settings_meta_box_audiotheme_record', '__return_true' );
-add_action( 'add_audiotheme_archive_settings_meta_box_audiotheme_video', '__return_true' );
-
-/**
  * Activate default archive setting fields.
  *
  * @param array $fields List of default fields to activate.
