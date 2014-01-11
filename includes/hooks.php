@@ -12,12 +12,14 @@
  * @since 1.0.0
  *
  * @param array $classes List of HTML class names.
+ * @param string $class One or more classes added to the class list.
+ * @param int $post_id The post ID.
  * @return array
  */
-function audiotheme_fourteen_post_classes( $classes ) {
-	global $post;
+function audiotheme_fourteen_post_classes( $classes, $class, $post_id ) {
+	$post = get_post( $post_id );
 
-	if ( 'audiotheme_track' == $post->post_type && has_post_thumbnail( $post->post_parent ) ) {
+	if ( 'audiotheme_track' == $post->post_type && ( has_post_thumbnail( $post_id ) || has_post_thumbnail( $post->post_parent ) ) ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 
@@ -27,7 +29,7 @@ function audiotheme_fourteen_post_classes( $classes ) {
 
 	return array_unique( $classes );
 }
-add_filter( 'post_class', 'audiotheme_fourteen_post_classes' );
+add_filter( 'post_class', 'audiotheme_fourteen_post_classes', 10, 3 );
 
 /**
  * Add AudioTheme Post Types to featured posts query.
