@@ -136,9 +136,7 @@ function twentyfourteen_list_authors() {
  * Display page content on contributor page template.
  */
 function audiotheme_fourteen_contributor_page_content() {
-	global $post;
-
-	if ( '' != $post->post_content ) :
+	if ( '' != get_post()->post_content ) :
 	?>
 		<div class="entry-content">
 			<?php
