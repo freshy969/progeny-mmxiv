@@ -11,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function audiotheme_fourteen_setup() {
+function audiotheme_fourteen_framework_setup() {
 	// Add support for AudioTheme widgets
 	add_theme_support( 'audiotheme-widgets', array(
 		'record',
@@ -20,7 +20,7 @@ function audiotheme_fourteen_setup() {
 		'video',
 	) );
 }
-add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
+add_action( 'after_setup_theme', 'audiotheme_fourteen_framework_setup' );
 
 /**
  * Before AudioTheme Main Content
