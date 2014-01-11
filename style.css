@@ -264,6 +264,10 @@ body .audiotheme-tracklist .audiotheme-track.is-playable:hover {
 	background: none;
 }
 
+body .audiotheme-tracklist .jplayer {
+	display: none;
+}
+
 
 /**
  * AudioTheme Track
