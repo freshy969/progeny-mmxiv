@@ -27,18 +27,16 @@ function audiotheme_fourteen_get_archive_title( $post = null, $singular = false 
 }
 
 /**
- * Print archive link
+ * Print archive link.
  *
  * @since 1.0.0
  */
 function audiotheme_fourteen_archive_link() {
-	global $post;
-
 	$post_type = get_post_type();
 	$link      = get_post_type_archive_link( $post_type );
 
 	if ( 'audiotheme_track' == $post_type ) {
-		$link = get_permalink( $post->post_parent );
+		$link = get_permalink( get_post()->post_parent );
 	}
 	?>
 	<a href="<?php echo esc_url( $link ); ?>">
