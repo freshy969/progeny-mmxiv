@@ -70,7 +70,7 @@ add_filter( 'audiotheme_widget_video_image_size', 'audiotheme_fourteen_widget_im
  * @since 1.0.0
  */
 function audiotheme_fourteen_archive_settings_fields( $fields, $post_type ) {
-	if ( ! in_array( $post_type, array( 'audiotheme_gig', 'audiotheme_record', 'audiotheme_video' ) ) ) {
+	if ( ! in_array( $post_type, array( 'audiotheme_record', 'audiotheme_video' ) ) ) {
 		return $fields;
 	}
 
