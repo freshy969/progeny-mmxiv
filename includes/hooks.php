@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package audiotheme-fourteen
+ * @package AudioTheme_Fourteen
  * @since 1.0.0
  */
 
@@ -10,6 +10,9 @@
  * Extend the default AudioTheme post classes.
  *
  * @since 1.0.0
+ *
+ * @param array $classes List of HTML class names.
+ * @return array
  */
 function audiotheme_fourteen_post_classes( $classes ) {
 	global $post;
@@ -27,16 +30,19 @@ function audiotheme_fourteen_post_classes( $classes ) {
 add_filter( 'post_class', 'audiotheme_fourteen_post_classes' );
 
 /**
- * Add AudioTheme Post Types to featured posts query
+ * Add AudioTheme Post Types to featured posts query.
  *
  * @since 1.0.0
+ *
+ * @param array $posts List of featured post IDs.
+ * @return array
  */
 function audiotheme_fourteen_get_featured_posts( $posts ) {
 	$options = get_option( 'featured-content' );
 
 	$term = get_term_by( 'name', $options['tag-name'], 'post_tag' );
 
-	// Return early if there are no terms with the set tag name
+	// Return early if there are no terms with the set tag name.
 	if ( ! $term ) {
 		return $posts;
 	}

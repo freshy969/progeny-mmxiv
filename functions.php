@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package audiotheme-fourteen
+ * @package AudioTheme_Fourteen
  * @since 1.0.0
  */
 
@@ -31,7 +31,7 @@ $audiotheme_fourteen = new Audiotheme_Loader();
 $audiotheme_fourteen->load();
 
 /**
- * Sets up theme defaults and registers support for various WordPress features.
+ * Set up theme defaults and register support for various WordPress features.
  *
  * @since 1.0.0
  */
@@ -43,7 +43,7 @@ function audiotheme_fourteen_setup() {
 add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
 
 /**
- * Allow Tags metabox on AudioTheme Post Types. This allows theme to be included
+ * Add Tags metabox on AudioTheme post types. This allows theme to be included
  * in the featured content section.
  *
  * @since 1.0.0

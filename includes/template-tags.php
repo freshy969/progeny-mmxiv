@@ -2,17 +2,17 @@
 /**
  * Custom template tags.
  *
- * @package audiotheme-fourteen
+ * @package AudioTheme_Fourteen
  * @since 1.0.0
  */
 
 /**
  * Retrieve the title for an archive.
  *
+ * @since 1.0.0
+ *
  * @param int|WP_Post $post Optional. Post to get the archive title for. Defaults to the current post.
  * @return string
- *
- * @since 1.0.0
  */
 function audiotheme_fourteen_get_archive_title( $post = null, $singular = false ) {
 	$post = get_post( $post );
@@ -51,9 +51,7 @@ function audiotheme_fourteen_archive_link() {
 /**
  * Print a list of all site contributors who published at least one post.
  *
- * @since Twenty Fourteen 1.0
- *
- * @return void
+ * @since 1.0.0
  */
 function twentyfourteen_list_authors() {
 	$member_ids = array_filter( wp_parse_id_list( get_post_meta( get_the_ID(), 'member_ids', true ) ) );
@@ -135,7 +133,7 @@ function twentyfourteen_list_authors() {
 }
 
 /**
- * Function to display page content on contributor page template
+ * Display page content on contributor page template.
  */
 function audiotheme_fourteen_contributor_page_content() {
 	global $post;
