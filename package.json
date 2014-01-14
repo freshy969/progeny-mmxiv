@@ -1,13 +1,13 @@
 {
-  "name": "MMXIV",
-  "slug": "mmxiv",
+  "name": "Progeny_MMXIV",
+  "slug": "progeny-mmxiv",
   "description": "Twenty Fourteen child theme for AudioTheme.",
   "version": "1.0.0",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AudioTheme/MMXIV.git"
+    "url": "https://github.com/AudioTheme/progeny-mmxiv.git"
   },
   "devDependencies": {
     "csscomb": "~0.1.0",
