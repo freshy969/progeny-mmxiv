@@ -1,13 +1,13 @@
 {
-  "name": "AudioThemeFourteen",
-  "slug": "audiotheme-fourteen",
-  "description": "Twenty Fourteen Child Theme for AudioTheme.",
+  "name": "MMXIV",
+  "slug": "mmxiv",
+  "description": "Twenty Fourteen child theme for AudioTheme.",
   "version": "1.0.0",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AudioTheme/audiotheme-fourteen.git"
+    "url": "https://github.com/AudioTheme/MMXIV.git"
   },
   "devDependencies": {
     "csscomb": "~0.1.0",

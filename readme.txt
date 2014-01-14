@@ -1,35 +1,35 @@
-== AudioTheme Fourteen ==
+== MMXIV ==
 
-AudioTheme Fourteen is a child theme which includes custom integration for the AudioTheme Framework, a plugin built to work with any WordPress theme, providing the features needed for a music-oriented website and allowing you to take your content with you anywhere you go — even when switching themes.
+MMXIV is a Twenty Fourteen child theme which includes custom integration for the AudioTheme Framework, a plugin built to work with any WordPress theme, providing the features needed for a music-oriented website and allowing you to take your content with you anywhere you go — even when switching themes.
 
 
 == Features ==
 
 === Enhanced Layouts and Functionality ===
 
-In AudioTheme Fourteen, we've enhanced the default functionality of Twenty Fourteen on various levels. Customized page layouts for music, videos, and gigs adapt to the layout and design of Twenty Fourteen, making your fans experience seamless and easy. Added support is included to feature music and videos within Twenty Fourteen's featured content grid or slider, too!
+In MMXIV, we've enhanced the default functionality of Twenty Fourteen on various levels. Customized page layouts for music, videos, and gigs adapt to the layout and design of Twenty Fourteen, making your fans experience seamless and easy. Added support is included to feature music and videos within Twenty Fourteen's featured content grid or slider, too!
 
 === More Widgets ===
 
-Featuring a new record or listing your upcoming shows doesn't get any easier than adding a widget to sidebar area. With AudioTheme Fourteen, you'll have access to the AudioTheme frameworks record, track, video, and upcoming gigs widgets, all styled to match Twenty Fourteen's clean design.
+Featuring a new record or listing your upcoming shows doesn't get any easier than adding a widget to sidebar area. With MMXIV, you'll have access to the AudioTheme frameworks record, track, video, and upcoming gigs widgets, all styled to match Twenty Fourteen's clean design.
 
 === Improved Page Templates ===
 
-We loved the concept of Twenty Fourteen's Contributor page template. We decided to extend this templates functionality to allow more control over the users and content displayed on the page. AudioTheme Fourteen allows a list of user ID's to be set via a custom field providing a way to showcase members of your band. If set, links to Twitter, Facebook, and a personal website are displayed for each user, too!
+We loved the concept of Twenty Fourteen's Contributor page template. We decided to extend this templates functionality to allow more control over the users and content displayed on the page. MMXIV allows a list of user ID's to be set via a custom field providing a way to showcase members of your band. If set, links to Twitter, Facebook, and a personal website are displayed for each user, too!
 
 === Social Menu Icons ===
 
 Social networking is a big part of connecting with your fans. We tapped into Twenty Fourteen's icon font and included automatic detection for adding social icons like Twitter, Facebook, Pinterest, Google+ and more directly into any menu navigation.
 
-You can use this AudioTheme Fourteen child theme for your own websites and projects.  No attribution is needed, but always appreciated.
+You can use this MMXIV child theme for your own websites and projects.  No attribution is needed, but always appreciated.
 
 To leave comments or ask questions about the theme, please visit the theme page: http://audiotheme.com/contact/
 
 
 == Copyright ==
 
-AudioTheme Fourteen, Copyright 2014 AudioTheme.com
-AudioTheme Fourteen is distributed under the terms of the GNU GPL
+MMXIV, Copyright 2014 AudioTheme.com
+MMXIV is distributed under the terms of the GNU GPL
 
 
 == FAQs ==
@@ -50,7 +50,7 @@ http://audiotheme.com/view/audiotheme/
 
 === Is the AudioTheme Framework Required? ===
 
-Yes. The AudioTheme framework plugin is required to take advantage of the enhanced features and functionality of the AudioTheme Fourteen child theme described above. Download the AudioTheme Framework for free:
+Yes. The AudioTheme framework plugin is required to take advantage of the enhanced features and functionality of the MMXIV child theme described above. Download the AudioTheme Framework for free:
 
 http://audiotheme.com/try/
 
@@ -74,17 +74,17 @@ http://audiotheme.com/contact/
 
 If you've found a bug or have a feature request, that's great. It would really help us out if these types of questions or comments could be submitted via the GitHub repository linked below. Submit a new issue and we'll go from there.
 
-https://github.com/AudioTheme/audiotheme-fourteen/issues
+https://github.com/AudioTheme/mmxiv/issues
 
 
 == Credits ==
 
-AudioTheme Fourteen is a derivative of the Twenty Fourteen theme by the WordPress team:
+MMXIV is a derivative of the Twenty Fourteen theme by the WordPress team:
 
 http://wordpress.org/themes/twentyfourteen
 Copyright: Automattic, automattic.com
 Licensed under GPLv2 or later
 
-Content and media used in AudioTheme Fourteen's theme demo is credited here:
+Content and media used in MMXIV's theme demo is credited here:
 
-http://demo.audiotheme.com/audiotheme-fourteen/credits/
+http://demo.audiotheme.com/mmxiv/credits/

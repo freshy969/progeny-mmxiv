@@ -9,7 +9,7 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package AudioTheme_Fourteen
+ * @package MMXIV
  * @since 1.0.0
  */
 
@@ -27,20 +27,20 @@ require( get_stylesheet_directory() . '/includes/hooks.php' );
  * @since 1.0.0
  */
 require( get_stylesheet_directory() . '/includes/audiotheme.php' );
-$audiotheme_fourteen = new Audiotheme_Loader();
-$audiotheme_fourteen->load();
+$mmxiv = new Audiotheme_Loader();
+$mmxiv->load();
 
 /**
  * Set up theme defaults and register support for various WordPress features.
  *
  * @since 1.0.0
  */
-function audiotheme_fourteen_setup() {
+function mmxiv_setup() {
 	// Add support for translating strings in this theme.
 	// @link http://codex.wordpress.org/Function_Reference/load_theme_textdomain
-	load_child_theme_textdomain( 'audiotheme-fourteen', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'mmxiv', get_stylesheet_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
+add_action( 'after_setup_theme', 'mmxiv_setup' );
 
 /**
  * Add Tags metabox on AudioTheme post types. This allows theme to be included
@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', 'audiotheme_fourteen_setup' );
  *
  * @since 1.0.0
  */
-function audiotheme_fourteen_admin_init() {
+function mmxiv_admin_init() {
 	register_taxonomy_for_object_type( 'post_tag', 'audiotheme_record' );
 }
-add_action( 'admin_init', 'audiotheme_fourteen_admin_init' );
+add_action( 'admin_init', 'mmxiv_admin_init' );

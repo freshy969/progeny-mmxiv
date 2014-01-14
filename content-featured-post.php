@@ -3,7 +3,7 @@
  * A template for displaying featured posts on the front page.
  * Includes customizations to display AudioTheme related entry meta.
  *
- * @package AudioTheme_Fourteen
+ * @package MMXIV
  * @since 1.0.0
  */
 ?>
@@ -24,13 +24,13 @@
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 
 			<div class="entry-meta">
-				<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'audiotheme-fourteen' ) ); ?></span>
+				<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'mmxiv' ) ); ?></span>
 			</div>
 
 		<?php  elseif ( ( 'audiotheme_record' || 'audiotheme_video' ) == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<span class="cat-links archive-link"><?php echo audiotheme_fourteen_archive_link(); ?></span>
+				<span class="cat-links archive-link"><?php echo mmxiv_archive_link(); ?></span>
 			</div>
 
 		<?php endif; ?>
