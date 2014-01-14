@@ -80,24 +80,24 @@ class Audiotheme_Loader {
 		<div id="audiotheme-framework-required-notice" class="error">
 			<p>
 				<?php
-				_e( 'The AudioTheme Framework plugin is required to be installed and activated for this theme to display properly.', 'mmxiv' );
+				_e( 'The AudioTheme Framework plugin is required to be installed and activated for this theme to display properly.', 'progeny-mmxiv' );
 
 				if ( 0 === validate_plugin( 'audiotheme/audiotheme.php' ) ) {
 					$activate_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=audiotheme/audiotheme.php', 'activate-plugin_audiotheme/audiotheme.php' );
 					printf( ' <a href="%s"><strong>%s</strong></a>',
 						esc_url( $activate_url ),
-						__( 'Activate now', 'mmxiv' )
+						__( 'Activate now', 'progeny-mmxiv' )
 					);
 				} else {
 					printf( ' <a href="http://audiotheme.com/try/" target="_blank"><strong>%s</strong></a>',
-						__( 'Download Free Trial', 'mmxiv' )
+						__( 'Download Free Trial', 'progeny-mmxiv' )
 					);
 				}
 
 				$dismiss_url = wp_nonce_url( add_query_arg( get_template(), 'dismiss-notice' ), $this->dismiss_notice_action() );
 				printf( ' <a href="%s" class="dismiss" style="float: right">%s</a>',
 					esc_url( $dismiss_url ),
-					__( 'Dismiss', 'mmxiv' )
+					__( 'Dismiss', 'progeny-mmxiv' )
 				);
 				?>
 			</p>

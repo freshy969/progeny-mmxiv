@@ -2,7 +2,7 @@
 /**
  * Custom template tags.
  *
- * @package MMXIV
+ * @package Progeny_MMXIV
  * @since 1.0.0
  */
 
@@ -14,7 +14,7 @@
  * @param int|WP_Post $post Optional. Post to get the archive title for. Defaults to the current post.
  * @return string
  */
-function mmxiv_get_archive_title( $post = null, $singular = false ) {
+function progeny_get_archive_title( $post = null, $singular = false ) {
 	$post = get_post( $post );
 
 	if ( $singular ) {
@@ -31,7 +31,7 @@ function mmxiv_get_archive_title( $post = null, $singular = false ) {
  *
  * @since 1.0.0
  */
-function mmxiv_archive_link() {
+function progeny_archive_link() {
 	$post_type = get_post_type();
 	$link      = get_post_type_archive_link( $post_type );
 
@@ -40,7 +40,7 @@ function mmxiv_archive_link() {
 	}
 	?>
 	<a href="<?php echo esc_url( $link ); ?>">
-		<?php echo esc_html( mmxiv_get_archive_title() ); ?>
+		<?php echo esc_html( progeny_get_archive_title() ); ?>
 	</a>
 	<?php
 }
@@ -65,7 +65,7 @@ function twentyfourteen_list_authors() {
 	}
 
 	// Display page content before contributor list.
-	mmxiv_contributor_page_content();
+	progeny_contributor_page_content();
 
 	foreach ( $contributor_ids as $contributor_id ) :
 		$post_count = count_user_posts( $contributor_id );
@@ -87,14 +87,14 @@ function twentyfourteen_list_authors() {
 
 					<?php if ( $post_count ) : ?>
 						<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>">
-							<?php printf( _n( '%d Article', '%d Articles', $post_count, 'mmxiv' ), $post_count ); ?>
+							<?php printf( _n( '%d Article', '%d Articles', $post_count, 'progeny-mmxiv' ), $post_count ); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if ( $twitter_username = get_the_author_meta( 'twitter', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-twitter-link" href="<?php echo esc_url( 'http://twitter.com/' . $twitter_username ); ?>" target="_blank">
-								<?php _e( 'Twitter', 'mmxiv' ); ?>
+								<?php _e( 'Twitter', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -102,7 +102,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $facebook_url = get_the_author_meta( 'facebook', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-facebook-link" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank">
-								<?php _e( 'Facebook', 'mmxiv' ); ?>
+								<?php _e( 'Facebook', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -110,7 +110,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $website_url = get_the_author_meta( 'user_url', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-website-link" href="<?php echo esc_url( $website_url ); ?>" target="_blank">
-								<?php _e( 'Website', 'mmxiv' ); ?>
+								<?php _e( 'Website', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -118,7 +118,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( is_user_logged_in() && current_user_can( 'edit_user', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-edit-link" href="<?php echo esc_url( get_edit_user_link( $contributor_id ) ); ?>" target="_blank">
-								<?php _e( 'Edit', 'mmxiv' ); ?>
+								<?php _e( 'Edit', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -133,7 +133,7 @@ function twentyfourteen_list_authors() {
 /**
  * Display page content on contributor page template.
  */
-function mmxiv_contributor_page_content() {
+function progeny_contributor_page_content() {
 	if ( '' != get_post()->post_content ) :
 	?>
 		<div class="entry-content">
@@ -141,7 +141,7 @@ function mmxiv_contributor_page_content() {
 			the_content();
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'mmxiv' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'progeny-mmxiv' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',

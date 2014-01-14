@@ -3,7 +3,7 @@
  * AudioTheme Compatibility File
  * See: http://audiotheme.com/
  *
- * @package MMXIV
+ * @package Progeny_MMXIV
  */
 
 /**
@@ -11,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function mmxiv_framework_setup() {
+function progeny_framework_setup() {
 	// Add support for AudioTheme widgets.
 	add_theme_support( 'audiotheme-widgets', array(
 		'record',
@@ -20,33 +20,33 @@ function mmxiv_framework_setup() {
 		'video',
 	) );
 }
-add_action( 'after_setup_theme', 'mmxiv_framework_setup' );
+add_action( 'after_setup_theme', 'progeny_framework_setup' );
 
 /**
  * HTML to display before main AudioTheme content.
  *
  * @since 1.0.0
  */
-function mmxiv_before_main_content() {
+function progeny_before_main_content() {
 	echo '<div id="main-content" class="main-content">';
 	echo '<div id="primary" class="content-area">';
 	echo '<div id="content" class="site-content" role="main">';
 }
-add_action( 'audiotheme_before_main_content', 'mmxiv_before_main_content' );
+add_action( 'audiotheme_before_main_content', 'progeny_before_main_content' );
 
 /**
  * HTML to display after main AudioTheme content.
  *
  * @since 1.0.0
  */
-function mmxiv_after_main_content() {
+function progeny_after_main_content() {
 	echo '</div><!-- #content -->';
 	echo '</div><!-- #primary -->';
 	echo '</div><!-- #main-content -->';
 	get_sidebar( 'content' );
 	get_sidebar();
 }
-add_action( 'audiotheme_after_main_content', 'mmxiv_after_main_content' );
+add_action( 'audiotheme_after_main_content', 'progeny_after_main_content' );
 
 /**
  * Adjust AudioTheme widget image sizes.
@@ -56,12 +56,12 @@ add_action( 'audiotheme_after_main_content', 'mmxiv_after_main_content' );
  * @param array $size Image size (width and height).
  * @return array
  */
-function mmxiv_widget_image_size( $size ) {
+function progeny_widget_image_size( $size ) {
 	return array( 612, 612 ); // sidebar width x 2
 }
-add_filter( 'audiotheme_widget_record_image_size', 'mmxiv_widget_image_size' );
-add_filter( 'audiotheme_widget_track_image_size', 'mmxiv_widget_image_size' );
-add_filter( 'audiotheme_widget_video_image_size', 'mmxiv_widget_image_size' );
+add_filter( 'audiotheme_widget_record_image_size', 'progeny_widget_image_size' );
+add_filter( 'audiotheme_widget_track_image_size', 'progeny_widget_image_size' );
+add_filter( 'audiotheme_widget_video_image_size', 'progeny_widget_image_size' );
 
 /**
  * Activate default archive setting fields.
@@ -72,7 +72,7 @@ add_filter( 'audiotheme_widget_video_image_size', 'mmxiv_widget_image_size' );
  * @param string $post_type Post type archive.
  * @return array
  */
-function mmxiv_archive_settings_fields( $fields, $post_type ) {
+function progeny_archive_settings_fields( $fields, $post_type ) {
 	if ( ! in_array( $post_type, array( 'audiotheme_record', 'audiotheme_video' ) ) ) {
 		return $fields;
 	}
@@ -86,4 +86,4 @@ function mmxiv_archive_settings_fields( $fields, $post_type ) {
 
 	return $fields;
 }
-add_filter( 'audiotheme_archive_settings_fields', 'mmxiv_archive_settings_fields', 10, 2 );
+add_filter( 'audiotheme_archive_settings_fields', 'progeny_archive_settings_fields', 10, 2 );

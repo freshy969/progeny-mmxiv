@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 		 * Archive the theme in the /release directory, excluding development
 		 * and build related files.
 		 *
-		 * The zip archive will be named: mmxiv-{{version}}.zip
+		 * The zip archive will be named: progeny-mmxiv-{{version}}.zip
 		 */
 		compress: {
 			build: {
