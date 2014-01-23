@@ -19,6 +19,9 @@ function progeny_framework_setup() {
 		'upcoming-gigs',
 		'video',
 	) );
+
+	add_image_size( 'record-thumbnail', 672, 672, true );
+	add_image_size( 'video-thumbnail', 672, 378, true );
 }
 add_action( 'after_setup_theme', 'progeny_framework_setup' );
 

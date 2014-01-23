@@ -45,7 +45,6 @@ function progeny_archive_link() {
 	<?php
 }
 
-
 /**
  * Print a list of all site contributors who published at least one post.
  *
