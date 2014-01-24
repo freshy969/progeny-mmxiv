@@ -2,7 +2,7 @@
   "name": "Progeny_MMXIV",
   "slug": "progeny-mmxiv",
   "description": "Twenty Fourteen child theme for AudioTheme.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
   "repository": {
