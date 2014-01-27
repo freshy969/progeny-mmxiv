@@ -45,7 +45,7 @@ class Audiotheme_Loader {
 	}
 
 	/**
-	 * Dismiss the Framework required notice.
+	 * Dismiss the Framework notice.
 	 *
 	 * This is a fallback in case the AJAX method doesn't work.
 	 *
@@ -80,7 +80,7 @@ class Audiotheme_Loader {
 		<div id="audiotheme-framework-required-notice" class="error">
 			<p>
 				<?php
-				_e( 'The AudioTheme Framework plugin is required to be installed and activated for this theme to display properly.', 'progeny-mmxiv' );
+				_e( 'Progeny MMXIV is designed to integrate with the AudioTheme Framework plugin.', 'progeny-mmxiv' );
 
 				if ( 0 === validate_plugin( 'audiotheme/audiotheme.php' ) ) {
 					$activate_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=audiotheme/audiotheme.php', 'activate-plugin_audiotheme/audiotheme.php' );

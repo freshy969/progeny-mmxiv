@@ -50,7 +50,7 @@ http://audiotheme.com/view/audiotheme/
 
 === Is the AudioTheme Framework Required? ===
 
-Yes. The AudioTheme framework plugin is required to take advantage of the enhanced features and functionality of the Progeny MMXIV child theme described above. Download the AudioTheme Framework for free:
+No. The AudioTheme framework plugin is not required for the theme to work. However, to take advantage of the enhanced features and functionality of the Progeny MMXIV child theme as described above, you'll want to download the AudioTheme Framework plugin. Download the AudioTheme framework plugin for free below:
 
 http://audiotheme.com/try/
 
