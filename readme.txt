@@ -54,11 +54,9 @@ No. The AudioTheme framework plugin is not required for the theme to work. Howev
 
 http://audiotheme.com/try/
 
-That said, some functionality like the social menu icons or enhanced Contributor page template do not require the to be active.
-
 === Where can I download the AudioTheme Framework? ===
 
-We provide an evalutaion copy of the framework for free via AudioTheme.com. Visit the link below and we'll send you a link to download an evaluation copy for free.
+We provide an evaluation copy of the framework for free via AudioTheme.com. Visit the link below and we'll send you a link to download an evaluation copy for free.
 
 === Do I have to purchase a Framework license? ===
 
