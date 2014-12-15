@@ -26,7 +26,7 @@ add_filter( 'post_class', 'progeny_post_class' );
 /**
  * Theme credits text.
  *
- * @since 1.0.0
+ * @since 1.1.0
  *
  * @param string $text Text to display.
  * @return string
