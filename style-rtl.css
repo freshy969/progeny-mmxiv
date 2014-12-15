@@ -1,16 +1,17 @@
 /*
  Theme Name: Progeny MMXIV
  Theme URI: http://audiotheme.com/view/progeny-mmxiv/
- Description: Twenty Fourteen child theme with customized AudioTheme integration. Start managing your sites content, music, gigs, and videos all in one place. <a href="http://audiotheme.com/try/">Download AudioTheme</a> | <a href="http://demo.audiotheme.com/progeny-mmxiv/">Theme Demo</a>
- Author: AudioTheme
- Author URI: http://audiotheme.com
+ Description: Twenty Fourteen child theme with customized AudioTheme integration. Start managing your sites content, music, gigs, and videos all in one place.
+ Author: Cedaro
+ Author URI: http://cedaro.com
  Template: twentyfourteen
- Version: 1.0.2
+ Version: 1.1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout,  responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
  Text Domain: progeny-mmxiv
 */
+
 
 /**
  * Misc
@@ -25,6 +26,10 @@
 	background-color: #24890d;
 	color: #fff;
 	font-weight: 400;
+}
+
+.full-width.post-type-archive .site-content .hentry.has-post-thumbnail:first-child {
+	margin-top: 0;
 }
 
 
