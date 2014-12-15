@@ -1,5 +1,5 @@
 = 1.0.2 =
-* Update framework notice and readme text.
+* Update AudioTheme notice and readme text.
 
 = 1.0.1 =
 * Update tags

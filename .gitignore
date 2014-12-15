@@ -1,7 +1,10 @@
-.DS_STORE
 .DS_Store
+.svn
+assets/css/editor-style.css
+assets/css/editor-style-rtl.css
 config.json
 docs
+languages/progeny-mmxiv.pot
 node_modules
 npm-debug.log
 release
