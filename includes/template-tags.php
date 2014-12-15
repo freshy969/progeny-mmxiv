@@ -47,6 +47,8 @@ function progeny_archive_link() {
 
 /**
  * Display page content on contributor page template.
+ *
+ * @since 1.0.0
  */
 function progeny_contributor_page_content() {
 	if ( '' != get_post()->post_content ) :
