@@ -29,7 +29,7 @@
 				<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'progeny-mmxiv' ) ); ?></span>
 			</div>
 
-		<?php  elseif ( ( 'audiotheme_record' || 'audiotheme_video' ) == get_post_type() ) : ?>
+		<?php elseif ( ( 'audiotheme_record' || 'audiotheme_video' ) == get_post_type() ) : ?>
 
 			<div class="entry-meta">
 				<span class="cat-links archive-link"><?php echo progeny_archive_link(); ?></span>
