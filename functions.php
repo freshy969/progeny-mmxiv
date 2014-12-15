@@ -43,6 +43,17 @@ function progeny_setup() {
 add_action( 'after_setup_theme', 'progeny_setup' );
 
 /**
+ * Enqueue scripts and styles.
+ *
+ * @since 1.2.0
+ */
+function progeny_enqueue_assets() {
+	// Load parent stylesheet.
+	wp_enqueue_style( 'twentyfourteen-style', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'progeny_enqueue_assets' );
+
+/**
  * Add Tags metabox on AudioTheme post types. This allows theme to be included
  * in the featured content section.
  *
