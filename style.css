@@ -12,6 +12,7 @@
  Text Domain: progeny-mmxiv
 */
 
+
 /**
  * Misc
  * -----------------------------------------------------------------------------
@@ -23,8 +24,12 @@
 .site-navigation .highlight.current-menu-item > a,
 .site-navigation .highlight.current-menu-ancestor > a {
 	background-color: #24890d;
-	color: #ffffff;
+	color: #fff;
 	font-weight: 400;
+}
+
+.full-width.post-type-archive .site-content .hentry.has-post-thumbnail:first-child {
+	margin-top: 0;
 }
 
 
@@ -38,17 +43,17 @@ body .audiotheme-record-single .audiotheme-record-header .audiotheme-record-titl
 	font-size: 33px;
 	font-weight: 300;
 	line-height: 1.0909090909;
-	margin-bottom: 12px;
 	margin: 0 0 12px 0;
+	margin-bottom: 12px;
 	text-transform: uppercase;
 }
 
 .site-content .audiotheme-record-links,
 .site-content .audiotheme-tracklist-section,
 .site-content .audiotheme-gig-single {
+	background-color: #fff;
 	margin: 0 auto;
 	max-width: 474px;
-	background-color: #ffffff;
 	padding: 12px 10px 0;
 }
 
@@ -78,7 +83,7 @@ body .content-sidebar .widget_audiotheme_upcoming_gigs dl {
 .featured-image a:hover,
 .audiotheme-featured-image a:hover,
 .audiotheme-record-artwork a:hover {
-	background-color: #999999;
+	background-color: #999;
 }
 
 .featured-image a:hover img,
@@ -94,8 +99,8 @@ body .content-sidebar .widget_audiotheme_upcoming_gigs dl {
  */
 
 body .audiotheme .audiotheme-gig-header .audiotheme-gig-title {
-	font-weight: 300;
 	clear: both;
+	font-weight: 300;
 	margin-bottom: 12px;
 }
 
@@ -145,13 +150,13 @@ body.list-view .audiotheme-gigs .hentry.has-post-thumbnail {
 }
 
 .audiotheme-gig-tickets-link a {
-	display: inline-block;
-	color: #ffffff;
 	background-color: #24890d;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
 	font-size: 12px;
 	padding: 5px 15px 4px;
 	text-transform: uppercase;
-	border-radius: 2px;
 }
 
 
@@ -165,11 +170,11 @@ body .audiotheme .audiotheme-record-single {
 }
 
 body .audiotheme .audiotheme-record-single .audiotheme-record-artwork {
-	margin: 0;
-	width: auto;
-	max-width: 100%;
-	float: none;
 	clear: both;
+	float: none;
+	margin: 0;
+	max-width: 100%;
+	width: auto;
 }
 
 /* Record Meta */
@@ -182,19 +187,19 @@ body .audiotheme .audiotheme-record-single .audiotheme-record-meta {
 }
 
 body .audiotheme .audiotheme-record-single .audiotheme-record-meta {
-	padding: 0;
-	margin: 0;
 	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 body .audiotheme .audiotheme-record-artist,
 body .audiotheme .audiotheme-record-single .audiotheme-record-meta,
 body .audiotheme .audiotheme-record-single .audiotheme-meta-item {
-	padding: 0;
 	color: #767676;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.3333333333;
+	padding: 0;
 	text-transform: uppercase;
 }
 
@@ -223,12 +228,12 @@ body .audiotheme-record-links-list {
 }
 
 body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link {
-	background: #000000;
+	background: #000;
 }
 
 body .audiotheme-record-links-list .audiotheme-record-links-item .audiotheme-record-link:hover {
-	color: #000000;
-	border-color: #000000;
+	border-color: #000;
+	color: #000;
 }
 
 /* Tracklist */
@@ -247,11 +252,11 @@ body .audiotheme-tracklist .audiotheme-track .audiotheme-track-title {
 }
 
 body .audiotheme .audiotheme-tracklist .audiotheme-track:before {
-	color: #767676;
 	border-right: none;
+	color: #767676;
+	padding-right: 5px;
 	text-align: right;
 	width: 25px;
-	padding-right: 5px;
 }
 
 body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-meta .audiotheme-track-download-link {
@@ -277,21 +282,21 @@ body .audiotheme .audiotheme-record-subtitle {
 }
 
 body .audiotheme .audiotheme-record-subtitle a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	color: #2b2b2b;
 	display: block;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 1.7142857142;
-	text-transform: none;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 11px 0 12px;
+	text-transform: none;
 	width: 100%;
 }
 
 body .audiotheme .audiotheme-record-subtitle a:before {
-	content: "Record";
 	color: #767676;
+	content: "Record";
 	display: block;
 	font-size: 12px;
 	font-weight: 900;
@@ -344,8 +349,8 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 .archive .audiotheme .audiotheme-grid .item {
-	width: 100%;
 	margin: 0 0 4%;
+	width: 100%;
 }
 
 .list-view .audiotheme .hentry {
@@ -380,7 +385,6 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 	display: none;
 }
 
-
 .archive .audiotheme .audiotheme-gigs {
 	border-top: none;
 	margin-bottom: 48px;
@@ -391,8 +395,8 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 }
 
 .archive .audiotheme .audiotheme-gig-card .audiotheme-gig-details {
-	padding-top: 0;
 	padding-bottom: 0;
+	padding-top: 0;
 }
 
 .archive .audiotheme .audiotheme-gig-meta-tickets {
@@ -406,30 +410,30 @@ body .audiotheme .audiotheme-record-subtitle a:hover {
 /* Paging Navigation */
 
 body .audiotheme-paged-nav {
-	padding: 0;
-	margin: 48px 0;
-	border-top: 5px solid #000000;
 	border-bottom: none;
+	border-top: 5px solid #000;
+	margin: 48px 0;
+	padding: 0;
 	text-align: center;
 }
 
 body .audiotheme-paged-nav .audiotheme-paged-nav-prev,
 body .audiotheme-paged-nav .audiotheme-paged-nav-next {
-	float: none;
-	width: auto;
 	display: inline-block;
+	float: none;
 	margin-top: -5px;
+	width: auto;
 }
 
 body .audiotheme-paged-nav a {
 	border-top: 5px solid transparent;
+	color: #2b2b2b;
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 900;
 	margin-right: 1px;
 	padding: 7px 16px;
 	text-transform: uppercase;
-	color: #2b2b2b;
 }
 
 body .audiotheme-paged-nav a:hover {
@@ -462,10 +466,10 @@ body .audiotheme-paged-nav a:hover {
 .content-sidebar .widget_audiotheme_record .featured-image + p:not(.more),
 .content-sidebar .widget_audiotheme_track .featured-image + p:not(.more),
 .content-sidebar .widget_audiotheme_video .featured-image + p:not(.more) {
-	margin-bottom: 18px;
-	padding-right: 10px;
-	padding-bottom: 18px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+	padding-right: 10px;
 }
 
 .content-sidebar .widget_audiotheme_record .more,
@@ -493,18 +497,18 @@ body .audiotheme-paged-nav a:hover {
 .content-sidebar .widget_audiotheme_record .widget-title:before,
 .content-sidebar .widget_audiotheme_track .widget-title:before,
 .content-sidebar .widget_audiotheme_video .widget-title:before {
-	-webkit-font-smoothing: antialiased;
+	background-color: #000;
+	color: #fff;
 	display: inline-block;
 	font: normal 16px/1 Genericons;
-	text-decoration: inherit;
-
-	background-color: #000000;
-	color: #ffffff;
 	margin: -1px 9px 0 0;
 	padding: 6px 0 9px;
 	text-align: center;
+	text-decoration: inherit;
 	vertical-align: middle;
 	width: 36px;
+
+	-webkit-font-smoothing: antialiased;
 }
 
 .content-sidebar .widget_audiotheme_record .widget-title:before {
@@ -552,9 +556,9 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .content-sidebar .widget_audiotheme_upcoming_gigs dl {
+	border-bottom: 1px solid;
 	margin-bottom: 0;
 	padding: 8px 0 9px;
-	border-bottom: 1px solid;
 }
 
 .content-sidebar .widget_audiotheme_upcoming_gigs dl:last-child {
@@ -577,16 +581,17 @@ body .audiotheme-paged-nav a:hover {
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-	font-family: 'Genericons';
-	speak: none;
+	font-family: "Genericons";
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
-	text-transform: none;
+	font-weight: normal;
 	line-height: 1;
+	text-decoration: inherit;
+	text-transform: none;
+
+	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-decoration: inherit;
 	text-rendering: optimizeLegibility;
 }
 
@@ -596,61 +601,76 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .icon a:before {
+	font-family: "Genericons";
 	font-size: 1.35em;
-	position: absolute;
-	font-family: 'Genericons';
-	speak: none;
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
-	text-transform: none;
+	font-weight: normal;
 	line-height: 1;
+	position: absolute;
+	text-decoration: inherit;
+	text-transform: none;
+
+	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-decoration: inherit;
 	text-rendering: optimizeLegibility;
 }
+
 .icon a[href*="dribbble.com"]:before {
 	content: "\f201";
 }
+
 .icon a[href*="facebook.com"]:before {
 	content: "\f204";
 }
+
 .icon a[href*="/feed/"]:before,
 .icon-feed .icon:before {
 	content: "\f413";
 }
+
 .icon a[href*="flickr.com"]:before {
 	content: "\f211";
 }
+
 .icon a[href*="github.com"]:before {
 	content: "\f200";
 }
+
 .icon a[href*="plus.google.com"]:before {
 	content: "\f218";
 }
+
 .icon a[href*="instagram.com"]:before {
 	content: "\f215";
 }
+
 .icon a[href*="linked.in"]:before {
 	content: "\f207";
 }
+
 .icon a[href*="pinterest.com"]:before {
 	content: "\f209";
 }
+
 .icon a[href*="twitter.com"]:before {
 	content: "\f202";
 }
+
 .icon a[href*="vimeo.com"]:before {
 	content: "\f212";
 }
+
 .icon a[href*="wordpress.org"]:before,
 .icon a[href*="wordpress.com"]:before {
 	content: "\f205";
 }
+
 .icon a[href*="youtube.com"]:before {
 	content: "\f213";
 }
+
 .icon.envelope a:before {
 	content: "\f410";
 }
@@ -662,10 +682,10 @@ body .audiotheme-paged-nav a:hover {
 
 .contributor .icon a,
 .primary-navigation .icon a {
-	padding-left: 0;
-	padding-right: 0;
 	display: inline-block;
 	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
@@ -682,19 +702,19 @@ body .audiotheme-paged-nav a:hover {
 
 .primary-navigation .icon a {
 	top: -1px;
-	width: 32px;
 	text-indent: 32px;
+	width: 32px;
 }
 
 .primary-navigation .icon a:before {
-	width: 32px;
 	line-height: 48px;
+	width: 32px;
 }
 
 .secondary-navigation .icon a:before {
+	line-height: 36px;
 	top: 0;
 	right: 30px;
-	line-height: 36px;
 }
 
 .widget_nav_menu .icon a {
@@ -703,10 +723,10 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .widget_nav_menu .icon a:before {
+	font-size: 1em;
 	position: absolute;
 	top: 2px;
 	left: 0;
-	font-size: 1em;
 	text-indent: 0;
 }
 
@@ -716,16 +736,16 @@ body .audiotheme-paged-nav a:hover {
 
 .contributor .icon a,
 .contributor .icon a:before {
-	width: 36px;
 	height: 36px;
 	line-height: 36px;
+	width: 36px;
 }
 
 .contributor .icon a {
 	background-color: #24890d;
 	border: 0;
 	border-radius: 2px;
-	color: #ffffff;
+	color: #fff;
 	font-size: 12px;
 	text-indent: 36px;
 	text-transform: uppercase;
@@ -733,8 +753,8 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .contributor .icon a:hover {
+	color: #fff;
 	opacity: 0.82;
-	color: #ffffff;
 }
 
 .contributor .icon a:before {
@@ -763,7 +783,7 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .contributor .icon .contributor-website-link {
-	background-color: #000000;
+	background-color: #000;
 }
 
 .contributor .contributor-posts-link {
@@ -776,6 +796,7 @@ body .audiotheme-paged-nav a:hover {
  * Media Queries
  * -----------------------------------------------------------------------------
  */
+
 @media screen and (max-width: 400px) {
 	.archive .audiotheme .archive-header,
 	.archive .audiotheme .audiotheme-grid .item {
@@ -810,8 +831,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 30px;
 		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
@@ -821,8 +842,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 15px;
 		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -832,8 +853,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 30px;
 		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
