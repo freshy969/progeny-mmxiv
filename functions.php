@@ -52,6 +52,7 @@ add_action( 'after_setup_theme', 'progeny_setup' );
  */
 function progeny_enqueue_assets() {
 	// Load parent stylesheet.
-	wp_enqueue_style( 'twentyfourteen-style', get_template_directory_uri() . '/style.css' );
+	// @link http://kovshenin.com/2014/child-themes-import/
+	wp_enqueue_style( 'progeny-parent-theme', get_template_directory_uri() . '/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'progeny_enqueue_assets' );
