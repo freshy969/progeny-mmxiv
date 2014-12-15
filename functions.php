@@ -15,16 +15,13 @@
 
 /**
  * Load helper functions and libraries.
- *
- * @since 1.0.0
  */
-require( get_stylesheet_directory() . '/includes/template-tags.php' );
 require( get_stylesheet_directory() . '/includes/hooks.php' );
+require( get_stylesheet_directory() . '/includes/pluggable-tags.php' );
+require( get_stylesheet_directory() . '/includes/template-tags.php' );
 
 /**
  * Load AudioTheme support or display a notice that it's needed.
- *
- * @since 1.1.0
  */
 if ( function_exists( 'audiotheme_load' ) ) {
 	require( get_stylesheet_directory() . '/includes/plugins/audiotheme.php' );
@@ -48,7 +45,7 @@ add_action( 'after_setup_theme', 'progeny_setup' );
 /**
  * Enqueue scripts and styles.
  *
- * @since 1.2.0
+ * @since 1.1.0
  */
 function progeny_enqueue_assets() {
 	// Load parent stylesheet.
