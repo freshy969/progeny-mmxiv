@@ -10,14 +10,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-		<?php if ( has_post_thumbnail() ) : ?>
-
-			<?php
-			$size = ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) ? 'post-thumbnail' : 'twentyfourteen-full-width';
-			the_post_thumbnail( $size );
-			?>
-
-		<?php endif; ?>
+	<?php
+		// Output the featured image.
+		if ( has_post_thumbnail() ) :
+			if ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) {
+				the_post_thumbnail();
+			} else {
+				the_post_thumbnail( 'twentyfourteen-full-width' );
+			}
+		endif;
+	?>
 	</a>
 
 	<header class="entry-header">
