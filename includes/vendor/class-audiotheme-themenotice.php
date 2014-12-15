@@ -1,21 +1,45 @@
 <?php
 /**
- * A drop-in for themes to help prevent them from completely breaking
- * or loading additional menus, assets, filters, etc. when the
- * AudioTheme framework plugin is inactive.
+ * Class to display a dismissable notice if AudioTheme isn't active.
  *
- * @package AudioThemeFramework\Loader
- * @since 1.0.0
+ * @package AudioTheme_Framework\ThemeNotice
+ * @link http://audiotheme.com/
+ * @license GPL-2.0+
+ * @version 1.0.0
  */
+class AudioTheme_ThemeNotice {
+	/**
+	 * Array of configurable strings.
+	 *
+	 * @since 1.0.0
+	 * @type array
+	 */
+	public $strings = array();
 
-if ( ! class_exists( 'Audiotheme_Loader' ) ) :
-/**
- * Class to load the AudioTheme Framework or display a notice.
- *
- * @package AudioThemeFramework\Loader
- * @since 1.0.0
- */
-class Audiotheme_Loader {
+	/**
+	 * Load the AudioTheme Framework or display a notice if it's not active.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct( $args = array() ) {
+		if ( ! $this->is_audiotheme_active() && is_admin() && current_user_can( 'activate_plugins' ) ) {
+			$this->strings = array(
+				'notice'     => __( 'The AudioTheme Framework should be installed and activated for this theme to display properly.' ),
+				'activate'   => __( 'Activate now' ),
+				'learn_more' => __( 'Find out more' ),
+				'dismiss'    => __( 'Dismiss' ),
+			);
+
+			if ( isset( $args['strings'] ) ) {
+				$this->strings = $args['strings'];
+			}
+
+			add_action( 'admin_notices', array( $this, 'display_notice' ) );
+			add_action( 'init', array( $this, 'init' ) );
+			add_action( 'wp_ajax_' . $this->dismiss_notice_action(), array( $this, 'ajax_dismiss_notice' ) );
+		}
+	}
+
 	/**
 	 * Check if the AudioTheme Framework is active.
 	 *
@@ -28,24 +52,7 @@ class Audiotheme_Loader {
 	}
 
 	/**
-	 * Load the AudioTheme Framework or display a notice if it's not active.
-	 *
-	 * @since 1.0.0
-	 */
-	public function load() {
-		$audiotheme_functions = get_stylesheet_directory() . '/audiotheme/functions.php';
-
-		if ( $this->is_audiotheme_active() && file_exists( $audiotheme_functions ) ) {
-			include( $audiotheme_functions );
-		} elseif ( is_admin() && current_user_can( 'activate_plugins' ) ) {
-			add_action( 'admin_notices', array( $this, 'display_notice' ) );
-			add_action( 'init', array( $this, 'init' ) );
-			add_action( 'wp_ajax_' . $this->dismiss_notice_action(), array( $this, 'ajax_dismiss_notice' ) );
-		}
-	}
-
-	/**
-	 * Dismiss the Framework notice.
+	 * Dismiss the Framework required notice.
 	 *
 	 * This is a fallback in case the AJAX method doesn't work.
 	 *
@@ -68,8 +75,6 @@ class Audiotheme_Loader {
 	 * @since 1.0.0
 	 */
 	public function display_notice() {
-		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
 		$user_id = get_current_user_id();
 
 		// Return early if user already dismissed the notice.
@@ -80,24 +85,24 @@ class Audiotheme_Loader {
 		<div id="audiotheme-framework-required-notice" class="error">
 			<p>
 				<?php
-				_e( 'Progeny MMXIV is designed to integrate with the AudioTheme Framework plugin.', 'progeny-mmxiv' );
+				echo $this->strings['notice'];
 
 				if ( 0 === validate_plugin( 'audiotheme/audiotheme.php' ) ) {
 					$activate_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=audiotheme/audiotheme.php', 'activate-plugin_audiotheme/audiotheme.php' );
 					printf( ' <a href="%s"><strong>%s</strong></a>',
 						esc_url( $activate_url ),
-						__( 'Activate now', 'progeny-mmxiv' )
+						$this->strings['activate']
 					);
 				} else {
-					printf( ' <a href="http://audiotheme.com/try/" target="_blank"><strong>%s</strong></a>',
-						__( 'Download Free Trial', 'progeny-mmxiv' )
+					printf( ' <a href="http://audiotheme.com/view/audiotheme/"><strong>%s</strong></a>',
+						$this->strings['learn_more']
 					);
 				}
 
 				$dismiss_url = wp_nonce_url( add_query_arg( get_template(), 'dismiss-notice' ), $this->dismiss_notice_action() );
 				printf( ' <a href="%s" class="dismiss" style="float: right">%s</a>',
 					esc_url( $dismiss_url ),
-					__( 'Dismiss', 'progeny-mmxiv' )
+					$this->strings['dismiss']
 				);
 				?>
 			</p>
@@ -143,7 +148,6 @@ class Audiotheme_Loader {
 	/**
 	 * User meta key for the notice status.
 	 *
-	 * @access protected
 	 * @since 1.0.0
 	 *
 	 * @return string
@@ -155,7 +159,6 @@ class Audiotheme_Loader {
 	/**
 	 * Name of the dismiss action.
 	 *
-	 * @access protected
 	 * @since 1.0.0
 	 *
 	 * @return string
@@ -167,7 +170,6 @@ class Audiotheme_Loader {
 	/**
 	 * Get the name of the current parent theme.
 	 *
-	 * @access protected
 	 * @since 1.0.0
 	 *
 	 * @return string
@@ -176,4 +178,3 @@ class Audiotheme_Loader {
 		return get_template();
 	}
 }
-endif;

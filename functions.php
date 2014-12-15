@@ -22,13 +22,16 @@ require( get_stylesheet_directory() . '/includes/template-tags.php' );
 require( get_stylesheet_directory() . '/includes/hooks.php' );
 
 /**
- * Load functions and hooks for supported plugins.
+ * Load AudioTheme support or display a notice that it's needed.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
-require( get_stylesheet_directory() . '/includes/audiotheme.php' );
-$progeny = new Audiotheme_Loader();
-$progeny->load();
+if ( function_exists( 'audiotheme_load' ) ) {
+	require( get_stylesheet_directory() . '/includes/plugins/audiotheme.php' );
+} else {
+	require( get_stylesheet_directory() . '/includes/vendor/class-audiotheme-themenotice.php' );
+	new Audiotheme_ThemeNotice();
+}
 
 /**
  * Set up theme defaults and register support for various WordPress features.
@@ -52,14 +55,3 @@ function progeny_enqueue_assets() {
 	wp_enqueue_style( 'twentyfourteen-style', get_template_directory_uri() . '/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'progeny_enqueue_assets' );
-
-/**
- * Add Tags metabox on AudioTheme post types. This allows theme to be included
- * in the featured content section.
- *
- * @since 1.0.0
- */
-function progeny_admin_init() {
-	register_taxonomy_for_object_type( 'post_tag', 'audiotheme_record' );
-}
-add_action( 'admin_init', 'progeny_admin_init' );
