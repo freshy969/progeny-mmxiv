@@ -2,7 +2,7 @@
 /**
  * Class to display a dismissable notice if AudioTheme isn't active.
  *
- * @package AudioTheme_Framework\ThemeNotice
+ * @package AudioTheme\ThemeNotice
  * @link http://audiotheme.com/
  * @license GPL-2.0+
  * @version 1.0.0
@@ -17,14 +17,14 @@ class AudioTheme_ThemeNotice {
 	public $strings = array();
 
 	/**
-	 * Load the AudioTheme Framework or display a notice if it's not active.
+	 * Load AudioTheme or display a notice if it's not active.
 	 *
 	 * @since 1.0.0
 	 */
 	public function __construct( $args = array() ) {
 		if ( ! $this->is_audiotheme_active() && is_admin() && current_user_can( 'activate_plugins' ) ) {
 			$this->strings = array(
-				'notice'     => __( 'The AudioTheme Framework should be installed and activated for this theme to display properly.' ),
+				'notice'     => __( 'The AudioTheme plugin should be installed and activated for this theme to display properly.' ),
 				'activate'   => __( 'Activate now' ),
 				'learn_more' => __( 'Find out more' ),
 				'dismiss'    => __( 'Dismiss' ),
@@ -41,7 +41,7 @@ class AudioTheme_ThemeNotice {
 	}
 
 	/**
-	 * Check if the AudioTheme Framework is active.
+	 * Check if AudioTheme is active.
 	 *
 	 * @since 1.0.0
 	 *
@@ -52,7 +52,7 @@ class AudioTheme_ThemeNotice {
 	}
 
 	/**
-	 * Dismiss the Framework required notice.
+	 * Dismiss the plugin required notice.
 	 *
 	 * This is a fallback in case the AJAX method doesn't work.
 	 *
@@ -70,7 +70,7 @@ class AudioTheme_ThemeNotice {
 	}
 
 	/**
-	 * Display a notice if the AudioTheme framework isn't active.
+	 * Display a notice if AudioTheme isn't active.
 	 *
 	 * @since 1.0.0
 	 */
@@ -82,7 +82,7 @@ class AudioTheme_ThemeNotice {
 			return;
 		}
 		?>
-		<div id="audiotheme-framework-required-notice" class="error">
+		<div id="audiotheme-required-notice" class="error">
 			<p>
 				<?php
 				echo $this->strings['notice'];
@@ -108,7 +108,7 @@ class AudioTheme_ThemeNotice {
 			</p>
 		</div>
 		<script type="text/javascript">
-		jQuery( '#audiotheme-framework-required-notice' ).on( 'click', '.dismiss', function( e ) {
+		jQuery( '#audiotheme-required-notice' ).on( 'click', '.dismiss', function( e ) {
 			var $notice = jQuery( this ).closest( '.error' );
 
 			e.preventDefault();
@@ -125,7 +125,7 @@ class AudioTheme_ThemeNotice {
 	}
 
 	/**
-	 * AJAX callback to dismiss the Framework required notice.
+	 * AJAX callback to dismiss the plugin required notice.
 	 *
 	 * @since 1.0.0
 	 */
@@ -153,7 +153,7 @@ class AudioTheme_ThemeNotice {
 	 * @return string
 	 */
 	protected function notice_key() {
-		return $this->theme() . '_audiotheme_framework_required_notice';
+		return $this->theme() . '_audiotheme_required_notice';
 	}
 
 	/**
@@ -164,7 +164,7 @@ class AudioTheme_ThemeNotice {
 	 * @return string
 	 */
 	protected function dismiss_notice_action() {
-		return $this->theme() . '-dismiss-audiotheme-framework-required-notice';
+		return $this->theme() . '-dismiss-audiotheme-required-notice';
 	}
 
 	/**
