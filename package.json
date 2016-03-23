@@ -1,15 +1,14 @@
 {
-  "name": "progeny-mmxiv",
-  "description": "",
-  "version": "1.1.0",
-  "author": "Cedaro",
+  "name": "progeny-mmixv",
+  "description": "Twenty Fourteen child theme by AudioTheme.",
+  "version": "1.1.0-beta",
+  "license": "GPL-2.0+",
+  "author": "AudioTheme",
   "main": "Gruntfile.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AudioTheme/progeny-mmxiv.git"
-  },
+  "repository": "cedaro/progeny-mmixv",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-audiotheme": "git://github.com/AudioTheme/grunt-audiotheme.git#v0.1.6"
+    "grunt": "^0.4.5",
+    "load-project-config": "^0.2.1",
+    "wp-theme-config": "git://github.com/cedaro/wp-theme-config.git#v0.5.0"
   }
 }
