@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="Progeny">
+	<file>./src</file>
+
+	<arg name="extensions" value="php" />
+	<arg name="report-file" value="phpcs.log" />
+
+	<rule ref="WordPress">
+		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
+		<exclude name="WordPress.Files.FileName.UnderscoresNotAllowed" />
+	</rule>
+
+	<rule ref="WordPress.XSS.EscapeOutput">
+        <properties>
+        	<property name="customAutoEscapedFunctions" value="" type="array" />
+        </properties>
+    </rule>
+</ruleset>
