@@ -1,18 +1,27 @@
 <?php
 /**
+ * AudioTheme required notice.
+ *
+ * @package   AudioTheme\ThemeNotice
+ * @version   1.0.1
+ * @since     1.0.0
+ * @link      https://audiotheme.com/
+ * @copyright Copyright (c) 2015 AudioTheme, LLC
+ * @license   GPL-2.0+
+ */
+
+/**
  * Class to display a dismissable notice if AudioTheme isn't active.
  *
  * @package AudioTheme\ThemeNotice
- * @link http://audiotheme.com/
- * @license GPL-2.0+
- * @version 1.0.0
+ * @since 1.0.0
  */
 class AudioTheme_ThemeNotice {
 	/**
 	 * Array of configurable strings.
 	 *
 	 * @since 1.0.0
-	 * @type array
+	 * @var array
 	 */
 	public $strings = array();
 
@@ -20,6 +29,8 @@ class AudioTheme_ThemeNotice {
 	 * Load AudioTheme or display a notice if it's not active.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param array $args Notice customization arguments.
 	 */
 	public function __construct( $args = array() ) {
 		if ( ! $this->is_audiotheme_active() && is_admin() && current_user_can( 'activate_plugins' ) ) {
@@ -61,12 +72,16 @@ class AudioTheme_ThemeNotice {
 	public function init() {
 		$slug = $this->theme();
 
-		if ( isset( $_GET[ $slug ] ) && 'dismiss-notice' == $_GET[ $slug ] && wp_verify_nonce( $_GET['_wpnonce'], $this->dismiss_notice_action() ) ) {
-			$this->dismiss_notice();
+		$is_dismiss_request = isset( $_GET[ $slug ] ) && 'dismiss-notice' === $_GET[ $slug ]; // WPCS: Input var OK.
+		$is_valid_nonce     = isset( $_GET['_wpnonce'] ) && wp_verify_nonce( $_GET['_wpnonce'], $this->dismiss_notice_action() ); // WPCS: Input var OK. Sanitization OK.
 
-			$redirect = remove_query_arg( array( $this->theme(), '_wpnonce' ) );
-			wp_safe_redirect( esc_url_raw( $redirect ) );
+		if ( ! $is_dismiss_request || ! $is_valid_nonce ) {
+			return;
 		}
+
+		$this->dismiss_notice();
+		$redirect = remove_query_arg( array( $this->theme(), '_wpnonce' ) );
+		wp_safe_redirect( esc_url_raw( $redirect ) );
 	}
 
 	/**
@@ -78,31 +93,31 @@ class AudioTheme_ThemeNotice {
 		$user_id = get_current_user_id();
 
 		// Return early if user already dismissed the notice.
-		if ( 'dismissed' == get_user_meta( $user_id, $this->notice_key(), true ) ) {
+		if ( 'dismissed' === get_user_meta( $user_id, $this->notice_key(), true ) ) {
 			return;
 		}
 		?>
 		<div id="audiotheme-required-notice" class="error">
 			<p>
 				<?php
-				echo $this->strings['notice'];
+				echo esc_html( $this->strings['notice'] );
 
 				if ( 0 === validate_plugin( 'audiotheme/audiotheme.php' ) ) {
 					$activate_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=audiotheme/audiotheme.php', 'activate-plugin_audiotheme/audiotheme.php' );
 					printf( ' <a href="%s"><strong>%s</strong></a>',
 						esc_url( $activate_url ),
-						$this->strings['activate']
+						esc_html( $this->strings['activate'] )
 					);
 				} else {
-					printf( ' <a href="http://audiotheme.com/view/audiotheme/"><strong>%s</strong></a>',
-						$this->strings['learn_more']
+					printf( ' <a href="https://audiotheme.com/view/audiotheme/"><strong>%s</strong></a>',
+						esc_html( $this->strings['learn_more'] )
 					);
 				}
 
 				$dismiss_url = wp_nonce_url( add_query_arg( get_template(), 'dismiss-notice' ), $this->dismiss_notice_action() );
 				printf( ' <a href="%s" class="dismiss" style="float: right">%s</a>',
 					esc_url( $dismiss_url ),
-					$this->strings['dismiss']
+					esc_html( $this->strings['dismiss'] )
 				);
 				?>
 			</p>
@@ -114,8 +129,8 @@ class AudioTheme_ThemeNotice {
 			e.preventDefault();
 
 			jQuery.get( ajaxurl, {
-				action: '<?php echo $this->dismiss_notice_action(); ?>',
-				_wpnonce: '<?php echo wp_create_nonce( $this->dismiss_notice_action() ); ?>'
+				action: '<?php echo $this->dismiss_notice_action(); // WPCS: XSS OK. ?>',
+				_wpnonce: '<?php echo wp_create_nonce( $this->dismiss_notice_action() ); // WPCS: XSS OK. ?>'
 			}, function() {
 				$notice.slideUp();
 			});
