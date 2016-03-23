@@ -1,16 +1,17 @@
-/*
- Theme Name: Progeny MMXIV
- Theme URI: http://audiotheme.com/view/progeny-mmxiv/
- Description: Twenty Fourteen child theme with customized AudioTheme integration. Start managing your sites content, music, gigs, and videos all in one place.
- Author: Cedaro
- Author URI: http://cedaro.com
- Template: twentyfourteen
- Version: 1.1.0
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout,  responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
- Text Domain: progeny-mmxiv
-*/
+/*!
+ * Theme Name: Progeny MMXIV
+ * Theme URI: http://audiotheme.com/view/progeny-mmxiv/
+ * Author: AudioTheme
+ * Author URI: http://audiotheme.com
+ * Description: Twenty Fourteen child theme with customized AudioTheme integration. Start managing your * sites content, music, gigs, and videos all in one place.
+ * Version: 1.1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Domain Path: /languages
+ * Template: twentyfourteen
+ * Text Domain: progeny-mmxiv
+ * Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout,  responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
+ */
 
 
 /**
@@ -110,8 +111,8 @@ body .audiotheme-gig-single .audiotheme-gig-header {
 
 body .audiotheme .audiotheme-gig-single dt,
 body .audiotheme .audiotheme-gig-single dd {
-	padding-right: 0;
 	padding-left: 0;
+	padding-right: 0;
 }
 
 body .audiotheme-gig-date {
@@ -135,10 +136,10 @@ body .audiotheme-gig-date strong {
 }
 
 body .audiotheme .audiotheme-gig-single .entry-content {
-	margin-right: 0;
 	margin-left: 0;
-	padding-right: 0;
+	margin-right: 0;
 	padding-left: 0;
+	padding-right: 0;
 }
 
 body.list-view .audiotheme-gigs .hentry.has-post-thumbnail {
@@ -210,7 +211,7 @@ body .audiotheme-record-meta {
 
 body .audiotheme-record-single .audiotheme-record-header .audiotheme-record-artist,
 body .audiotheme .audiotheme-meta-item {
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 body .audiotheme .audiotheme-meta-item {
@@ -252,15 +253,15 @@ body .audiotheme-tracklist .audiotheme-track .audiotheme-track-title {
 }
 
 body .audiotheme .audiotheme-tracklist .audiotheme-track:before {
-	border-left: none;
+	border-right: none;
 	color: #767676;
-	padding-left: 5px;
-	text-align: left;
+	padding-right: 5px;
+	text-align: right;
 	width: 25px;
 }
 
 body .audiotheme .audiotheme-tracklist .audiotheme-track .audiotheme-track-meta .audiotheme-track-download-link {
-	margin: -2px 0 0 10px;
+	margin: -2px 10px 0 0;
 }
 
 body .audiotheme-tracklist .audiotheme-track.is-playable:hover {
@@ -431,7 +432,7 @@ body .audiotheme-paged-nav a {
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 900;
-	margin-left: 1px;
+	margin-right: 1px;
 	padding: 7px 16px;
 	text-transform: uppercase;
 }
@@ -469,7 +470,7 @@ body .audiotheme-paged-nav a:hover {
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	margin-bottom: 18px;
 	padding-bottom: 18px;
-	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .content-sidebar .widget_audiotheme_record .more,
@@ -501,14 +502,13 @@ body .audiotheme-paged-nav a:hover {
 	color: #fff;
 	display: inline-block;
 	font: normal 16px/1 Genericons;
-	margin: -1px 0 0 9px;
+	-webkit-font-smoothing: antialiased;
+	margin: -1px 9px 0 0;
 	padding: 6px 0 9px;
 	text-align: center;
 	text-decoration: inherit;
 	vertical-align: middle;
 	width: 36px;
-
-	-webkit-font-smoothing: antialiased;
 }
 
 .content-sidebar .widget_audiotheme_record .widget-title:before {
@@ -582,17 +582,17 @@ body .audiotheme-paged-nav a:hover {
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
 	font-family: "Genericons";
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	line-height: 1;
 	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
 	text-transform: none;
 
 	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
 }
 
 .icon a {
@@ -603,18 +603,18 @@ body .audiotheme-paged-nav a:hover {
 .icon a:before {
 	font-family: "Genericons";
 	font-size: 1.35em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	line-height: 1;
 	position: absolute;
 	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
 	text-transform: none;
 
 	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
 }
 
 .icon a[href*="dribbble.com"]:before {
@@ -684,8 +684,8 @@ body .audiotheme-paged-nav a:hover {
 .primary-navigation .icon a {
 	display: inline-block;
 	overflow: hidden;
-	padding-right: 0;
 	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
@@ -695,7 +695,7 @@ body .audiotheme-paged-nav a:hover {
 .primary-navigation .icon a:before {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	text-align: center;
 	text-indent: 0;
 }
@@ -714,7 +714,7 @@ body .audiotheme-paged-nav a:hover {
 .secondary-navigation .icon a:before {
 	line-height: 36px;
 	top: 0;
-	left: 30px;
+	right: 30px;
 }
 
 .widget_nav_menu .icon a {
@@ -726,7 +726,7 @@ body .audiotheme-paged-nav a:hover {
 	font-size: 1em;
 	position: absolute;
 	top: 2px;
-	right: 0;
+	left: 0;
 	text-indent: 0;
 }
 
@@ -787,8 +787,8 @@ body .audiotheme-paged-nav a:hover {
 }
 
 .contributor .contributor-posts-link {
-	padding-right: 20px;
 	padding-left: 20px;
+	padding-right: 20px;
 }
 
 
@@ -817,11 +817,11 @@ body .audiotheme-paged-nav a:hover {
 	}
 
 	.archive .audiotheme .audiotheme-grid .item-2np1 {
-		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.archive .audiotheme .audiotheme-grid .item-2n {
-		margin-right: 4%;
+		margin-left: 4%;
 	}
 }
 
@@ -831,8 +831,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 30px;
 		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
@@ -842,8 +842,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 15px;
 		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -853,8 +853,8 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		padding-right: 30px;
 		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
@@ -864,7 +864,7 @@ body .audiotheme-paged-nav a:hover {
 	.site-content .audiotheme-gig-single,
 	.site-content .audiotheme-record-links,
 	.site-content .audiotheme-tracklist-section {
-		margin-left: 54px;
+		margin-right: 54px;
 	}
 
 	.full-width.archive .audiotheme .audiotheme-grid,
@@ -872,6 +872,6 @@ body .audiotheme-paged-nav a:hover {
 	.full-width .site-content .audiotheme-gig-single,
 	.full-width .site-content .audiotheme-record-links,
 	.full-width .site-content .audiotheme-tracklist-section {
-		margin-left: auto;
+		margin-right: auto;
 	}
 }
