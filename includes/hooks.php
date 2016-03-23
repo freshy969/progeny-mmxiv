@@ -19,7 +19,7 @@ function progeny_post_class( $classes ) {
 		$classes[] = 'has-members';
 	}
 
-	return array_unique( $classes );
+	return $classes;
 }
 add_filter( 'post_class', 'progeny_post_class' );
 
