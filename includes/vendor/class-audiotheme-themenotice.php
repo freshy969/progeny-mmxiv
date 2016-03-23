@@ -24,10 +24,10 @@ class AudioTheme_ThemeNotice {
 	public function __construct( $args = array() ) {
 		if ( ! $this->is_audiotheme_active() && is_admin() && current_user_can( 'activate_plugins' ) ) {
 			$this->strings = array(
-				'notice'     => __( 'The AudioTheme plugin should be installed and activated for this theme to display properly.' ),
-				'activate'   => __( 'Activate now' ),
-				'learn_more' => __( 'Find out more' ),
-				'dismiss'    => __( 'Dismiss' ),
+				'notice'     => esc_html__( 'The AudioTheme plugin should be installed and activated for this theme to display properly.' ),
+				'activate'   => esc_html__( 'Activate now' ),
+				'learn_more' => esc_html__( 'Find out more' ),
+				'dismiss'    => esc_html__( 'Dismiss' ),
 			);
 
 			if ( isset( $args['strings'] ) ) {
