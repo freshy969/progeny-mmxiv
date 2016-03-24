@@ -1,7 +1,7 @@
 {
   "name": "progeny-mmixv",
   "description": "Twenty Fourteen child theme by AudioTheme.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "GPL-2.0+",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
