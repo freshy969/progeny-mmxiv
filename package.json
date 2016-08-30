@@ -7,8 +7,8 @@
   "main": "Gruntfile.js",
   "repository": "cedaro/progeny-mmixv",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "load-project-config": "^0.2.1",
-    "wp-theme-config": "git://github.com/cedaro/wp-theme-config.git#v0.6.0"
+    "wp-theme-config": "git://github.com/cedaro/wp-theme-config.git#v0.6.2"
   }
 }
