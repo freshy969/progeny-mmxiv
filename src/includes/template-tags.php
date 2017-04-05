@@ -34,15 +34,17 @@ function progeny_get_archive_title( $post = null, $singular = false ) {
 function progeny_archive_link() {
 	$post_type = get_post_type();
 	$link      = get_post_type_archive_link( $post_type );
+	$title     = progeny_get_archive_title();
 
 	if ( 'audiotheme_track' == $post_type ) {
 		$link = get_permalink( get_post()->post_parent );
 	}
-	?>
-	<a href="<?php echo esc_url( $link ); ?>">
-		<?php echo esc_html( progeny_get_archive_title() ); ?>
-	</a>
-	<?php
+
+	printf(
+		'<a href="%1$s">%2$s</a>',
+		esc_url( $link ),
+		progeny_allowed_tags( $title )
+	);
 }
 
 /**
