@@ -51,20 +51,35 @@ function progeny_archive_link() {
  * @since 1.0.0
  */
 function progeny_contributor_page_content() {
-	if ( '' != get_post()->post_content ) :
+	if ( ! progeny_has_content() ) {
+		return;
+	}
 	?>
-		<div class="entry-content">
-			<?php
-			the_content();
+	<div class="entry-content">
+		<?php
+		the_content();
 
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'progeny-mmxiv' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-			?>
-		</div>
+		wp_link_pages( array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'progeny-mmxiv' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+		) );
+		?>
+	</div>
 	<?php
-	endif;
+}
+
+/**
+ * Determine if a post has content.
+ *
+ * @since 1.0.0
+ *
+ * @param int|WP_Post $post_id Optional. Post ID or WP_Post object. Defaults to the current global post.
+ * @return bool
+ */
+function progeny_has_content( $post_id = null ) {
+	$post_id = empty( $post_id ) ? get_the_ID() : $post_id;
+	$content = get_post_field( 'post_content', $post_id );
+	return empty( $content ) ? false : true;
 }
