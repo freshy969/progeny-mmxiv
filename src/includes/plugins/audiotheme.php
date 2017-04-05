@@ -151,6 +151,10 @@ add_filter( 'audiotheme_archive_settings_fields', 'progeny_audiotheme_archive_se
  * @return array
  */
 function progeny_audiotheme_get_featured_posts( $posts ) {
+	if ( ! class_exists( 'Featured_Content' ) ) {
+		return;
+	}
+
 	$tag_id = Featured_Content::get_setting( 'tag-id' );
 
 	// Return early if a tag id hasn't been set.
