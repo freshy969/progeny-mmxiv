@@ -83,3 +83,44 @@ function progeny_has_content( $post_id = null ) {
 	$content = get_post_field( 'post_content', $post_id );
 	return empty( $content ) ? false : true;
 }
+
+if ( ! function_exists( 'progeny_allowed_tags' ) ) :
+/**
+ * Allow only the allowedtags array in a string.
+ *
+ * @since 1.0.0
+ *
+ * @link https://www.tollmanz.com/wp-kses-performance/
+ *
+ * @param  string $string The unsanitized string.
+ * @return string         The sanitized string.
+ */
+function progeny_allowed_tags( $string ) {
+	global $allowedtags;
+
+	$theme_tags = array(
+		'a' => array(
+			'class' => true,
+			'href' => true,
+			'rel' => true,
+			'title' => true,
+		),
+		'br' => array(),
+		'h2' => array(
+			'class' => true,
+		),
+		'p' => array(
+			'class' => true,
+		),
+		'span' => array(
+			'class' => true,
+		),
+		'time' => array(
+			'class' => true,
+			'datetime' => true,
+		),
+	);
+
+	return wp_kses( $string, array_merge( $allowedtags, $theme_tags ) );
+}
+endif;
