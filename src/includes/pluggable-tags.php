@@ -54,7 +54,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $twitter_username = get_the_author_meta( 'twitter', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-twitter-link" href="<?php echo esc_url( 'http://twitter.com/' . $twitter_username ); ?>" target="_blank">
-								<?php _e( 'Twitter', 'progeny-mmxiv' ); ?>
+								<?php esc_html_e( 'Twitter', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -62,7 +62,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $facebook_url = get_the_author_meta( 'facebook', $contributor_id ) ) : ?>
 						<span class="icon">
 							<a class="contributor-facebook-link" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank">
-								<?php _e( 'Facebook', 'progeny-mmxiv' ); ?>
+								<?php esc_html_e( 'Facebook', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -70,7 +70,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( $website_url = get_the_author_meta( 'user_url', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-website-link" href="<?php echo esc_url( $website_url ); ?>" target="_blank">
-								<?php _e( 'Website', 'progeny-mmxiv' ); ?>
+								<?php esc_html_e( 'Website', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
@@ -78,7 +78,7 @@ function twentyfourteen_list_authors() {
 					<?php if ( is_user_logged_in() && current_user_can( 'edit_user', $contributor_id ) ) : ?>
 						<span class="icon icon-link">
 							<a class="contributor-edit-link" href="<?php echo esc_url( get_edit_user_link( $contributor_id ) ); ?>" target="_blank">
-								<?php _e( 'Edit', 'progeny-mmxiv' ); ?>
+								<?php esc_html_e( 'Edit', 'progeny-mmxiv' ); ?>
 							</a>
 						</span>
 					<?php endif; ?>
