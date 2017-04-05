@@ -1,11 +1,11 @@
 {
   "name": "progeny-mmixv",
   "description": "Twenty Fourteen child theme by AudioTheme.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "GPL-2.0+",
   "author": "AudioTheme",
   "main": "Gruntfile.js",
-  "repository": "cedaro/progeny-mmixv",
+  "repository": "audiotheme/progeny-mmixv",
   "devDependencies": {
     "grunt": "^1.0.1",
     "load-project-config": "^0.2.1",
