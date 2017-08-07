@@ -9,6 +9,6 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "load-project-config": "^0.2.1",
-    "wp-theme-config": "git://github.com/cedaro/wp-theme-config.git#v0.6.2"
+    "wp-theme-config": "git://github.com/cedaro/wp-theme-config.git#v0.6.3"
   }
 }
