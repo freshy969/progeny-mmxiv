@@ -1,12 +1,13 @@
 .DS_Store
 .svn
-npm-debug.log
-phpcs.log
 build
 dist
 node_modules
-src/assets/css/editor-style.css
-src/assets/css/editor-style-rtl.css
+npm-debug.log
+package-lock.json
+phpcs.log
+src/assets/css/*.css
+!src/assets/css/themicons.css
 src/languages/*.pot
 src/style.css
 src/style-rtl.css
